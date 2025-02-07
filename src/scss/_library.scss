@@ -1,23 +1,77 @@
+@import "mixins";
+
 .main-yourLibraryX-library {
     border-radius: 0;
 }
+
+// TODO
+.main-yourLibraryX-libraryRootlist ul li:nth-child(odd),
+aside[aria-label="Queue"] ul > div:nth-child(odd) > li {
+    background-color: #474747;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #606060;
+}
+
+.main-yourLibraryX-libraryRootlist ul li:nth-child(even),
+aside[aria-label="Queue"] ul > div:nth-child(even) > li {
+    background-color: #414141;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #606060;
+}
+
+/* Library Navbar > List Item Album Art */
+[class^="x-entityImage-"] {
+    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, .65);
+}
+
+.main-yourLibraryX-libraryRootlist {
+    padding: 0;
+
+    ul li {
+        > div:nth-child(1) {
+            padding: 8px 12px;
+        }
+    }
+}
+
 
 .main-yourLibraryX-header {
     border-top: 1px solid #909090;
     border-bottom: 1px solid #373737;
     background-image: linear-gradient(#767676, 50%, #646464);
     padding: 12px 16px;
-}
 
-.main-yourLibraryX-header .main-yourLibraryX-collapseButtonWrapper {
-    color: #373737;
-    text-shadow: 0px 1px #C0C0C0;
-    border-radius: 10px;
-}
 
-.main-yourLibraryX-header button {
-    border-bottom: 1px solid #373737;
-    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    .main-yourLibraryX-headerContent{
+        /* Left Navbar > Create New Dropdown Menu Item */
+        #context-menu .main-contextMenu-menuItemButton {
+            @include svg-icon();
+            color: #202020;
+
+            > span {
+                text-shadow: 0px 1px 1px #bbb;
+            }
+        }
+
+        /* "Your Library" button */
+        .main-yourLibraryX-collapseButton button svg {
+            fill: #373737;
+            filter: invert(5%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+        }
+    }
+
+    .main-yourLibraryX-collapseButtonWrapper  {
+        color: #373737;
+        text-shadow: 0px 1px #C0C0C0;
+        border-radius: 10px;
+    }
+
+
+    button {
+        @include svg-icon();
+        border-bottom: 1px solid #373737;
+        background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    }
 }
 
 .main-yourLibraryX-filterArea {
@@ -32,3 +86,6 @@
     text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px;
 }
 
+.main-yourLibraryX-listItem svg {
+    filter: drop-shadow(0px 1px 1px #222);
+}
