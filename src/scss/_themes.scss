@@ -1,0 +1,93 @@
+:root {
+  --encore-body-font-stack: "Segoe UI", var(--fallback-fonts, sans-serif);
+  --encore-title-font-stack: "Helvetica", var(--fallback-fonts, sans-serif);
+  --encore-variable-font-stack: "Segoe UI", var(--fallback-fonts, sans-serif);
+  --encore-corner-radius-smaller: 0px;
+  --encore-corner-radius-base: 0px;
+  --encore-corner-radius-larger: 0px;
+  --encore-corner-radius-larger-2: 0px;
+  --encore-corner-radius-larger-3: 0px;
+}
+
+.encore-layout-themes,.encore-small-devices-theme {
+    --encore-corner-radius-smaller: 0px;
+    --encore-corner-radius-base: 0px;
+    --encore-corner-radius-larger: 0px;
+    --encore-corner-radius-larger-2: 0px;
+    --encore-corner-radius-larger-3: 0px;
+}
+
+@media(min-width: 768px) {
+    .encore-layout-themes {
+        --encore-text-size-smaller-2:0.75rem;
+        --encore-text-size-smaller: 0.875rem;
+        --encore-text-size-base: 1rem;
+        --encore-text-size-larger: 1.5rem;
+        --encore-text-size-larger-2: 2rem;
+        --encore-text-size-larger-3: 3rem;
+        --encore-text-size-larger-4: 4rem;
+        --encore-text-size-larger-5: 6rem;
+        --encore-border-width-hairline: 1px;
+        --encore-border-width-thin: 2px;
+        --encore-border-width-thick: 4px;
+        --encore-border-width-thicker: 8px;
+        --encore-border-width-focus: 3px;
+        --encore-graphic-size-decorative-smaller-2: 12px;
+        --encore-graphic-size-decorative-smaller: 16px;
+        --encore-graphic-size-decorative-base: 24px;
+        --encore-graphic-size-decorative-larger: 32px;
+        --encore-graphic-size-decorative-larger-2: 40px;
+        --encore-graphic-size-decorative-larger-3: 48px;
+        --encore-graphic-size-decorative-larger-4: 64px;
+        --encore-graphic-size-decorative-larger-5: 88px;
+        --encore-graphic-size-informative-smaller-2: 0.75rem;
+        --encore-graphic-size-informative-smaller: 1rem;
+        --encore-graphic-size-informative-base: 1.5rem;
+        --encore-graphic-size-informative-larger: 2rem;
+        --encore-graphic-size-informative-larger-2: 2.5rem;
+        --encore-graphic-size-informative-larger-3: 3rem;
+        --encore-graphic-size-informative-larger-4: 4rem;
+        --encore-graphic-size-informative-larger-5: 5.5rem;
+        --encore-spacing-tighter-5: 2px;
+        --encore-spacing-tighter-4: 4px;
+        --encore-spacing-tighter-3: 6px;
+        --encore-spacing-tighter-2: 8px;
+        --encore-spacing-tighter: 12px;
+        --encore-spacing-base: 16px;
+        --encore-spacing-looser: 24px;
+        --encore-spacing-looser-2: 32px;
+        --encore-spacing-looser-3: 48px;
+        --encore-spacing-looser-4: 64px;
+        --encore-spacing-looser-5: 96px;
+        --encore-spacing-looser-6: 128px;
+        --encore-control-size-smaller: 32px;
+        --encore-control-size-base: 48px;
+        --encore-control-size-larger: 56px;
+        --encore-layout-margin-tighter: 24px;
+        --encore-layout-margin-base: 32px;
+        --encore-layout-margin-looser: 64px;
+        --encore-corner-radius-smaller: 0px;
+        --encore-corner-radius-base: 0px;
+        --encore-corner-radius-larger: 0px;
+        --encore-corner-radius-larger-2: 0px;
+        --encore-corner-radius-larger-3: 0px;
+    }
+}
+
+.encore-medium-devices-theme {
+    --encore-corner-radius-smaller: 0px;
+    --encore-corner-radius-base: 0px;
+    --encore-corner-radius-larger: 0px;
+    --encore-corner-radius-larger-2: 0px;
+    --encore-corner-radius-larger-3: 0px;
+}
+
+.encore-dark-theme {
+  --background-base: #474747 !important;
+}
+
+.encore-dark-theme .encore-bright-accent-set {
+  --background-highlight: #A2D422;
+  --background-elevated-base: #A2D422;
+  --background-elevated-highlight: #A2D422;
+}

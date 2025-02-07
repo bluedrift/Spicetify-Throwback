@@ -1,0 +1,33 @@
+/* 
+ * Spicetify Throwback
+ *
+ * Tested with:
+ * Spotify for Windows 1.2.53.440.g7bf582a
+ * Spicetify v2.38.7
+ */
+
+@use 'themes';
+
+@use 'rest';
+
+* {
+    -webkit-font-smoothing: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 4px;
+}
+
+/* Remove Upgrade Button, User Name, Ads */
+.main-topBar-UpgradeButton,
+.main-userWidget-displayName,
+.main-leaderboardComponent-container,
+.main-billboardComponent-footer,
+.Root__modal-slot,
+.main-minimizedVideoTakeover-videoAdContainer {
+  display: none
+}
