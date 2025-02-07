@@ -1,0 +1,1320 @@
+/* 
+ * Spicetify Throwback
+ *
+ * Tested with:
+ * Spotify for Windows 1.2.53.440.g7bf582a
+ * Spicetify v2.38.7
+ */
+
+:root {
+  --encore-body-font-stack: "Segoe UI", var(--fallback-fonts, sans-serif);
+  --encore-title-font-stack: "Helvetica", var(--fallback-fonts, sans-serif);
+  --encore-variable-font-stack: "Segoe UI", var(--fallback-fonts, sans-serif);
+  --encore-corner-radius-smaller: 0px;
+  --encore-corner-radius-base: 0px;
+  --encore-corner-radius-larger: 0px;
+  --encore-corner-radius-larger-2: 0px;
+  --encore-corner-radius-larger-3: 0px;
+}
+
+.encore-layout-themes,.encore-small-devices-theme {
+    --encore-corner-radius-smaller: 0px;
+    --encore-corner-radius-base: 0px;
+    --encore-corner-radius-larger: 0px;
+    --encore-corner-radius-larger-2: 0px;
+    --encore-corner-radius-larger-3: 0px;
+}
+
+@media(min-width: 768px) {
+    .encore-layout-themes {
+        --encore-text-size-smaller-2:0.75rem;
+        --encore-text-size-smaller: 0.875rem;
+        --encore-text-size-base: 1rem;
+        --encore-text-size-larger: 1.5rem;
+        --encore-text-size-larger-2: 2rem;
+        --encore-text-size-larger-3: 3rem;
+        --encore-text-size-larger-4: 4rem;
+        --encore-text-size-larger-5: 6rem;
+        --encore-border-width-hairline: 1px;
+        --encore-border-width-thin: 2px;
+        --encore-border-width-thick: 4px;
+        --encore-border-width-thicker: 8px;
+        --encore-border-width-focus: 3px;
+        --encore-graphic-size-decorative-smaller-2: 12px;
+        --encore-graphic-size-decorative-smaller: 16px;
+        --encore-graphic-size-decorative-base: 24px;
+        --encore-graphic-size-decorative-larger: 32px;
+        --encore-graphic-size-decorative-larger-2: 40px;
+        --encore-graphic-size-decorative-larger-3: 48px;
+        --encore-graphic-size-decorative-larger-4: 64px;
+        --encore-graphic-size-decorative-larger-5: 88px;
+        --encore-graphic-size-informative-smaller-2: 0.75rem;
+        --encore-graphic-size-informative-smaller: 1rem;
+        --encore-graphic-size-informative-base: 1.5rem;
+        --encore-graphic-size-informative-larger: 2rem;
+        --encore-graphic-size-informative-larger-2: 2.5rem;
+        --encore-graphic-size-informative-larger-3: 3rem;
+        --encore-graphic-size-informative-larger-4: 4rem;
+        --encore-graphic-size-informative-larger-5: 5.5rem;
+        --encore-spacing-tighter-5: 2px;
+        --encore-spacing-tighter-4: 4px;
+        --encore-spacing-tighter-3: 6px;
+        --encore-spacing-tighter-2: 8px;
+        --encore-spacing-tighter: 12px;
+        --encore-spacing-base: 16px;
+        --encore-spacing-looser: 24px;
+        --encore-spacing-looser-2: 32px;
+        --encore-spacing-looser-3: 48px;
+        --encore-spacing-looser-4: 64px;
+        --encore-spacing-looser-5: 96px;
+        --encore-spacing-looser-6: 128px;
+        --encore-control-size-smaller: 32px;
+        --encore-control-size-base: 48px;
+        --encore-control-size-larger: 56px;
+        --encore-layout-margin-tighter: 24px;
+        --encore-layout-margin-base: 32px;
+        --encore-layout-margin-looser: 64px;
+        --encore-corner-radius-smaller: 0px;
+        --encore-corner-radius-base: 0px;
+        --encore-corner-radius-larger: 0px;
+        --encore-corner-radius-larger-2: 0px;
+        --encore-corner-radius-larger-3: 0px;
+    }
+}
+
+.encore-medium-devices-theme {
+    --encore-corner-radius-smaller: 0px;
+    --encore-corner-radius-base: 0px;
+    --encore-corner-radius-larger: 0px;
+    --encore-corner-radius-larger-2: 0px;
+    --encore-corner-radius-larger-3: 0px;
+}
+
+.encore-dark-theme {
+  --background-base: #474747 !important;
+}
+
+.encore-dark-theme .encore-bright-accent-set {
+  --background-highlight: #A2D422;
+  --background-elevated-base: #A2D422;
+  --background-elevated-highlight: #A2D422;
+}
+
+* {
+    -webkit-font-smoothing: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 4px;
+}
+
+/* Remove Upgrade Button, User Name, Ads */
+.main-topBar-UpgradeButton,
+.main-userWidget-displayName,
+.main-leaderboardComponent-container,
+.main-billboardComponent-footer,
+.Root__modal-slot,
+.main-minimizedVideoTakeover-videoAdContainer {
+  display: none
+}
+
+.Root__top-container {
+    gap: 0px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.Root__globalNav {
+    height: calc(48px + 24px);
+    padding: calc(var(--panel-gap));
+    padding-bottom: 0px;
+    translate: 0 -8px;
+}
+
+.spotify__container--is-desktop.spotify__os--is-windows .Root__globalNav {
+    padding-inline: calc(64px - 4px*var(--zoom-level, 0)) calc(164px - 12px*var(--zoom-level, 0));
+}
+
+.Root__nav-bar {
+    border-right: 1px solid #373737;
+}
+
+.Root__right-sidebar {
+    border-left: 1px solid #373737;
+}
+
+.Root__right-sidebar aside {
+    border-radius: 0px;
+}
+
+.Root__right-sidebar aside > div:before {
+    background: red;
+}
+
+.Root__main-view {
+    border-radius: 0px;
+}
+
+.Root__globalNav {
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    border-bottom: 1px solid #373737;
+}
+
+.Root__nav-bar, .Root__main-view, .Root__right-sidebar {
+    /* border-top: 1px solid #C0C0C0; */
+}
+
+.main-topBar-searchBar {
+    border-radius: 10px !important;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 55%) inset, inset 0 -1px 1px rgb(218 218 218) !important;
+}
+
+.main-globalNav-navLink:not(.main-globalNav-navLinkActive) .Svg-img-icon-medium,
+.main-actionButtons > button > svg {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+}
+
+.ButtonInner-large-iconOnly svg,
+.ButtonInner-large-iconOnly-isUsingKeyboard svg {
+    filter: drop-shadow(0px 1px 0px #ccc);
+    transform: initial;
+}
+
+/* Circular Icon Buttons (Play, Home, Marketplace, etc.) */
+.main-globalNav-navLink,
+.main-userWidget-box,
+.ButtonInner-medium-iconOnly,
+.ButtonInner-medium-iconOnly-isUsingKeyboard,
+.ButtonInner-large-iconOnly,
+.ButtonInner-large-iconOnly-isUsingKeyboard {
+    background-image: linear-gradient(180deg, #F0F0F0, 40%, #808080);
+    border: 1px solid #505050;
+}
+.ButtonInner-small-iconOnly, 
+.ButtonInner-small-iconOnly-isUsingKeyboard {
+    background-image: linear-gradient(180deg, #F0F0F0, 40%, #808080);
+}
+.main-globalNav-navLink:active,
+.main-userWidget-box:active,
+.ButtonInner-medium-iconOnly:active,
+.ButtonInner-medium-iconOnly-isUsingKeyboard:active,
+.ButtonInner-large-iconOnly:active,
+.ButtonInner-large-iconOnly-isUsingKeyboard:active {
+    background-image: linear-gradient(180deg, #606060 20%, #B0B0B0);
+    border: 1px solid #505050;
+}
+.ButtonInner-small-iconOnly:active,
+.ButtonInner-small-iconOnly-isUsingKeyboard:active {
+    background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
+}
+
+/* Top Bar > Home Button (pressed) */
+.main-globalNav-navLink.main-globalNav-navLinkActive .Svg-img-icon-medium {
+    filter: invert(100%) sepia(100%) saturate(1200%) hue-rotate(55deg) brightness(178%) contrast(120%) drop-shadow(0px 1px 0px #9b9)
+}
+
+/* About the Artist > "Follow" Button */
+.Button-buttonSecondary-small-useBrowserDefaultFocusStyle,
+.Button-buttonSecondary-small-isUsingKeyboard-useBrowserDefaultFocusStyle {
+    border: 1px solid #373737;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    color: black;
+    text-shadow: 0px 1px #C0C0C0;
+}
+.Button-buttonSecondary-small-useBrowserDefaultFocusStyle:hover,
+.Button-buttonSecondary-small-isUsingKeyboard-useBrowserDefaultFocusStyle:hover {
+    transform: initial !important;
+    border: 1px solid #373737;
+}
+.Button-buttonSecondary-small-useBrowserDefaultFocusStyle:active,
+.Button-buttonSecondary-small-isUsingKeyboard-useBrowserDefaultFocusStyle:active {
+    background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
+    opacity: 1 !important;
+    transform: initial !important;
+}
+
+/* Top Bar > Navigation Buttons */
+.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed,
+.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-useBrowserDefaultFocusStyle-condensed {
+    color: #3D3D3D !important;
+}
+.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed:hover,
+.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-useBrowserDefaultFocusStyle-condensed:hover {
+    color: #505050 !important;
+}
+
+.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-disabled-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed,
+.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-disabled-useBrowserDefaultFocusStyle-condensed {
+    color: #505050 !important;
+}
+
+button:hover {
+    transform: initial !important;
+    filter: brightness(115%);
+}
+
+.Button-buttonPrimary-useBrowserDefaultFocusStyle-data-is-icon-only:hover > span {
+    transform: initial !important;
+}
+
+/* Home Page > Radio Recommendations */
+/* .main-shelf-shelfGrid div[class^="Box__BoxComponent-sc-"] { */
+/*     border-radius: 0; */
+/*     box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.7); */
+/* } */
+
+/* Notification Dot */
+.main-userWidget-notificationDot {
+  color: #f00
+}
+
+.main-trackList-trackList {
+    border-bottom: 1px solid #282828;
+}
+
+/* Track List Header > Column Names */
+.main-trackList-trackListHeaderRow
+{
+    height: 24px;
+    color: black;
+    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px;
+}
+
+.main-trackList-trackListHeaderRow > div {
+    border-left: 1px solid #00000040;
+    padding-left: 8px;
+    margin-left: -8px;
+    border-right: 1px solid #C0C0C050;
+    margin-right: -8px;
+}
+
+[class^="main-trackList-rowSection"]:after {
+    content: "";
+    display: block;
+    border-left: 1px solid #ADADAD;
+    border-right: 1px solid black;
+}
+
+[class^="x-entityImage-"] {
+    border-radius: 0px;
+}
+
+[data-testid="cover-art-button"] {
+    border-radius: 0px;
+}
+
+/* Now Playing View > Border Radius */
+.main-coverSlotCollapsed-navAltContainer, .main-nowPlayingView-coverArt,
+.main-nowPlayingView-aboutArtistV2Image,
+.main-nowPlayingView-aboutArtistV2Button {
+    border-radius: 0px;
+}
+
+.main-trackList-trackListHeader,
+.main-trackList-trackListHeaderStuck.main-trackList-trackListHeader
+{
+    /* -webkit-box-sizing: content-box; */
+    /* box-sizing: content-box; */
+    height: 24px;
+    /* margin: 0 calc(var(--content-spacing)* -1) calc(var(--content-spacing) - 8px); */
+    margin: 0 calc(var(--content-spacing)* -1) 0;
+    /* padding: 0 var(--content-spacing); */ 
+    position: sticky;
+    z-index: 2;
+    background-image: linear-gradient(#a0a0a0, #606060);
+    border: initial;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+/* .main-trackList-trackListHeader:after { */
+/*     content: ""; */
+/*     display: block; */
+/*     border: 1px solid black; */
+/* } */
+
+.main-trackList-column {
+    color: black;
+    text-shadow: 0px 1px rgba(200, 200, 200, 0.5);
+    /* font-weight: bold; */
+}
+
+.main-trackList-column.main-trackList-durationHeader {
+    translate: -7px 0;
+    color: black;
+    filter: drop-shadow(0px 1px 1px rgba(200, 200, 200, 0.5));
+}
+
+.encore-text-body-small {
+    font-size: 14px;
+}
+
+.encore-text-body-medium {
+    font-size: 15px;
+}
+
+/* Track List Header > Column Names */
+.main-trackList-column > .encore-text.encore-text-body-small,
+[data-testId="column-header-context-menu"] > .encore-text.encore-text-body-small,
+.main-trackList-rowSectionIndex[role="columnheader"] {
+    color: black;
+    font-weight: bold;
+}
+
+/* Album/Playlist Page > "List" Mode > Item Text */
+.main-trackList-rowMainContent, 
+.main-trackList-rowMainVariable > div,
+.main-trackList-rowSectionEnd:not([role="columnheader"]) > div {
+    /* display: flex; */
+    /* margin-bottom: 6px; */
+}
+
+.main-trackList-rowMainVariable > div,
+.main-trackList-rowSectionEnd > div {
+    font-weight: normal !important;
+}
+
+.main-trackList-trackListRow, .main-rootlist-wrapper {
+    /* --row-height: 28px !important; */
+    /* --row-height: 40px !important; */
+    border-radius: 0px;
+}
+
+.playlist-playlist-playlist .main-trackList-trackListRow, .main-rootlist-wrapper,
+section[data-testid="album-page"] .main-trackList-trackListRow, .main-rootlist-wrapper {
+    /* --row-height: 32px !important; */
+    border-radius: 0px;
+}
+
+/* .main-gridContainer-gridContainer { */
+/*     margin-top: 10px; */
+/* } */
+
+.main-trackList-rowImage {
+    border-radius: 0px !important;
+}
+
+/* Track List > Track Item Background */
+section[data-testid="album-page"] .main-rootlist-wrapper > [role="presentation"] > [role="presentation"]:nth-child(odd) .main-trackList-trackListRow,
+section[data-testid="playlist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(odd) .main-trackList-trackListRow,
+section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(odd) .main-trackList-trackListRow
+{
+    background-color: #373737;
+}
+section[data-testid="album-page"] .main-rootlist-wrapper > [role="presentation"] > [role="presentation"]:nth-child(even) .main-trackList-trackListRow,
+section[data-testid="playlist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(even) .main-trackList-trackListRow,
+section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(even) .main-trackList-trackListRow
+{
+    background-color: #313131;
+}
+
+.main-trackList-trackList span,
+.main-trackList-trackList div {
+    text-align: initial;
+    direction: initial;
+}
+
+.main-nowPlayingView-section {
+    border-radius: 0px;
+}
+
+.main-entityHeader-image {
+    border-radius: 0px;
+}
+
+/* Various Text > Drop Shadows */
+.main-nowPlayingBar-nowPlayingBar .encore-text,
+.main-rootlist-wrapper .encore-text,
+aside[aria-label="Queue"] ul li .encore-text,
+.main-shelf-shelfGrid div,
+aside[aria-label="Connect to a device"] .encore-text {
+    text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.StyledTabList-tablist-tabList {
+    padding: 0;
+    margin: 4px;
+}
+
+.StyledTabList-tablist-tabList > button {
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    color: #272727;
+    text-shadow: 0px 1px #C0C0C0;
+}
+
+[class*="StyledTabItem-tab-tabItem"]:hover {
+    color: #272727;
+}
+
+[class*="StyledTabItem-tab-tabItem"]:active {
+    background-image: linear-gradient(180deg, #606060 20%, #B0B0B0);
+    color: #272727;
+}
+
+[class*="StyledTabItem-tab-tabItem"][aria-selected="true"] {
+    background-image: linear-gradient(180deg, #999999, #595959);
+    color: #C8C8C8;
+    text-shadow: 0px 2px #404040;
+}
+
+[class*="StyledTabItem-tab-tabItem"][aria-selected="true"]:active {
+    background-image: linear-gradient(#595959, 20%, #999999) !important;
+}
+
+.StyledTabList-tablist-tabList > button {
+    border-right: 1px solid #272727;
+    border-top: 1px solid #272727;
+    border-bottom: 1px solid #272727;
+}
+
+.StyledTabList-tablist-tabList > button:first-child {
+    border-left: 1px solid #272727;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.StyledTabList-tablist-tabList > button:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Album/Playlist Page > Album/Playlist Title */
+.encore-text-headline-large {
+    font-size: var(--encore-text-size-larger-4) !important;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+}
+
+.encore-text-title-small
+{
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Album/Playlist Page > Sticky Header Album/Playlist Title */
+[data-testid="topbar-content"] > .encore-text-title-small
+{
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.main-topBar-background {
+    border-radius: 0px;
+}
+
+.main-entityHeader-shadow {
+    box-shadow: 0px 0px 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
+}
+
+/* Page - Padding */
+.contentSpacing {
+    padding: 0;
+}
+.contentSpacing:has(.main-entityHeader-headerText),
+.contentSpacing.main-actionBar-ActionBar,
+.main-topBar-container .contentSpacing {
+    padding: 0 var(--content-spacing);
+}
+
+.contentSpacing.main-actionBar-ActionBar {
+    padding-bottom: var(--action-bar-padding-bottom, var(--content-spacing));
+    padding-top: var(--action-bar-padding-top, var(--content-spacing));
+}
+
+/* Album/Playlist Page - Background */
+main > section[data-testid="album-page"] > .contentSpacing,
+main > section[data-testid="playlist-page"] > .contentSpacing,
+main > section[data-testid="playlist-page"] .playlist-playlist-playlistContent > .main-useDropTarget-base .contentSpacing,
+main > section[data-testid="artist-page"] > section.contentSpacing:has(.artist-artistDiscography-topBar)
+{
+    background-color: #373737;
+    background-image: url(https://www.transparenttextures.com/patterns/low-contrast-linen.png);
+}
+
+/* Album Page - Copyright Date */
+main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 14px;
+    padding-bottom: 16px;
+    border-top: 1px solid #484848;
+    background: #373737;
+}
+
+/* main > section[data-testid="album-page"] > [data-overlayscrollbars] { /1* Play button *1/ */
+/*     padding: var(--content-spacing); */
+/* } */
+
+.main-card-imageContainer > div:nth-child(1), .main-card-imageContainer img  {
+    border-radius: 0px;
+}
+
+.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm,
+.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm:after {
+    /* background-color: var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)); */
+    background: #707070;
+}
+
+.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm:before {
+    border-color: transparent #707070 transparent transparent;
+}
+
+.ChipInnerComponent-sm, .ChipInnerComponent-sm-isUsingKeyboard,
+.ChipInnerComponent-sm-selected, .ChipInnerComponent-sm-selected-isUsingKeyboard,
+.ChipInnerComponent-sm-selected-secondary, .ChipInnerComponent-sm-selected-secondary-isUsingKeyboard
+{
+    box-sizing: initial;
+    -webkit-tap-highlight-color: initial;
+    border-radius: initial;
+    color: initial;
+    transition: initial;
+    display: initial;
+    min-inline-size: initial;
+    min-block-size: initial;
+    -webkit-box-align: initial;
+    align-items: initial;
+    padding-block: initial;
+    padding-inline: initial;
+    background-color: initial;
+
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    font-size: 11px;
+    margin: 2px 5px 2px 12px;
+    padding: 0 10px 0 12px;
+    background: #545454;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.ChipInnerComponent-sm:before, .ChipInnerComponent-sm-isUsingKeyboard:before, 
+.ChipInnerComponent-sm-selected:before, .ChipInnerComponent-sm-selected-isUsingKeyboard:before  {
+    content: "";
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-color: transparent #545454 transparent transparent;
+    border-style: solid;
+    border-width: 12px 12px 12px 0;
+}
+
+.ChipInnerComponent-sm:after, .ChipInnerComponent-sm-isUsingKeyboard:after, 
+.ChipInnerComponent-sm-selected:after, .ChipInnerComponent-sm-selected-isUsingKeyboard:after  {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    float: left;
+    width: 4px;
+    height: 4px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background: #808080;
+    -moz-box-shadow: -1px -1px 2px #004977;
+    -webkit-box-shadow: -1px -1px 2px #004977;
+    box-shadow: -1px -1px 2px #004977;
+}
+
+.ChipInnerComponent-sm-selected, .ChipInnerComponent-sm-selected-isUsingKeyboard,
+.ChipInnerComponent-sm-selected-secondary, .ChipInnerComponent-sm-selected-secondary-isUsingKeyboard {
+    background: #BBB;
+    color: black;
+}
+
+.ChipInnerComponent-sm-selected:before, .ChipInnerComponent-sm-selected-isUsingKeyboard:before  {
+    border-color: transparent #BBB transparent transparent;
+}
+
+.main-shelf-header {
+    background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
+    border-bottom: 1px solid #303030;
+}
+
+.main-gridContainer-gridContainer > div > h2 {
+    background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
+    border-bottom: 1px solid #303030;
+    padding: 4px 10px;
+    margin-block-end: 0px !important;
+    min-block-size: 0px;
+}
+
+/* Artist Page > "See More" Button */
+.artist-popularTrackList-seeMore {
+    border: 1px solid #373737;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    color: black;
+    border-radius: 100px;
+    padding: 4px 8px;
+    margin: 12px;
+}
+.artist-popularTrackList-seeMore > div,
+.main-nowPlayingView-aboutArtistV2Listeners > div {
+    text-shadow: 0px 1px #C0C0C0;
+}
+
+.main-shelf-header > div { /* Auto Generated */
+    margin: 4px 10px;
+    min-block-size: 0px;
+}
+.main-shelf-header>div>div>div:first-child,
+.main-shelf-header>div>div>div:last-child {
+    justify-content: space-around;
+}
+
+.main-shelf-header h2,
+.main-gridContainer-gridContainer h2
+{
+    font-size: 14px;
+}
+
+/* Artist Page > Header > Artist Image */
+.profile-editImage-imageContainer .main-avatar-image,
+/* Artist Page > About Section > Artist Image */
+.contentSpacing > .main-gridContainer-gridContainer .main-avatar-image
+{
+    box-shadow: 0px 0px 20px 5px rgba(10, 10, 10, 1);
+    border-radius: 0px;
+}
+
+.main-gridContainer-gridContainer > div > div > button { /* Auto Generated */
+    border-radius: 0px;
+}
+
+.main-home-content {
+    gap: 0px;
+}
+
+.main-home-content.contentSpacing {
+    padding: 0px;
+}
+
+/* Home Screen > Header Gradient Background */
+.main-home-homeHeader {
+    background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #373737), var(--background-noise);
+}
+
+/* Home Screen > "Jump back in" header */
+.main-home-content section[data-testid="component-shelf"] > div:nth-child(1) {
+    border-top: 1px solid #80808080;
+    border-bottom: 1px solid #20202080;
+    padding: 0 calc(var(--content-spacing) - 8px);
+
+    background-image: linear-gradient(#656565, 50%, #404040);
+    border-top: 1px solid #767676;
+    border-bottom: 1px solid #373737;
+    z-index: 50;
+}
+
+/* Artist Page > Liked Songs/Artist Pick Container (not always visible) */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) {
+    gap: 0px;
+    margin-bottom: 12px;
+}
+
+/* Artist Page > Liked Songs/Artist Pick Containers (not always visible) */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) > div {
+    width: 50%
+}
+
+/* Artist Page > Liked Songs/Artist Pick Container Headers */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) h2 {
+    padding: 4px 10px;
+    background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
+    border-bottom: 1px solid #303030;
+}
+
+/* Artist Page > Liked Songs/Artist Pick Containers > Padding */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) > div > div {
+    padding: 0 var(--content-spacing);
+}
+
+/* Artist Page > Popular Songs Container Margin */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer {
+    margin-bottom: 10px;
+}
+
+.main-home-content section[data-testid="component-shelf"] > div:nth-child(1) > div {
+    min-block-size: 34px;
+}
+
+.main-home-content section[data-testid="component-shelf"] > div:nth-child(1) h2 {
+    font-size: 22px;
+}
+
+/* Home Screen > "Jump back in" content */
+.main-home-content section[data-testid="component-shelf"] > div:nth-child(2) {
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #20202080;
+}
+
+.view-homeShortcutsGrid-shortcuts,
+.main-home-content .search-searchCategory-contentArea {
+    padding: 0 var(--content-spacing);
+}
+
+.view-homeShortcutsGrid-shortcut {
+    border-radius: 0;
+}
+
+/* Artist page shelves background */
+section[data-testid="artist-page"] > div > div:nth-child(2) > .contentSpacing {
+    padding: 0px;
+    background: #373737;
+}
+
+/* Main View > Background Texture */
+.main-view-container:has([data-testid="home-page"]) .main-view-container__scroll-node > div,
+.main-view-container:has([data-testid="home-section-page"]) .main-view-container__scroll-node > div,
+/* Browse View > Background Texture */
+#searchPage,
+/* Artist Page > Background Texture */
+section[data-testid="artist-page"] > div > div:nth-child(2) > .contentSpacing {
+    background-color: #373737;
+    background-image: url(https://www.transparenttextures.com/patterns/low-contrast-linen.png);
+}
+
+#searchPage.contentSpacing > div:nth-child(1) > div:nth-child(1) {
+    margin-top: 0;
+}
+
+#searchPage.contentSpacing > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+    margin-top: 0;
+}
+
+#searchPage .main-gridContainer-gridContainer {
+    gap: 0 !important;
+}
+
+.main-trackList-rowImageWithPlay .main-trackList-rowImagePlayPauseButton {
+    border-radius: 0;
+}
+
+/* Main View > Shelf List Details > Album Grid Gaps */
+.main-gridContainer-gridContainer.main-shelf-shelfGrid {
+    row-gap: 0 !important;
+}
+
+/* Main View > Shelf List Details > Header Margin */
+section.main-shelf-shelf > .main-shelf-header {
+    margin-bottom: 0;
+}
+
+.main-view-container__scroll-node-child {
+    padding-bottom: 0px;
+    /* background: #373737; */
+}
+
+.main-view-container__scroll-node-child .contentSpacing {
+    /* background: #373737; */
+}
+
+#searchPage {
+    padding: 0px;
+}
+
+.main-shelf-subHeader,
+.main-shelf-shelfGrid {
+    padding: 0 var(--content-spacing);
+}
+
+.main-shelf-subHeader > div:has(button) {
+    margin-block: 0px;
+    margin-top: 8px;
+}
+
+.main-shelf-shelfGrid {
+    margin-bottom: 10px;
+}
+
+section.main-shelf-shelf {
+    margin: 0;
+}
+
+.LegacyChipComponent-checkbox-chip-sm-useBrowserDefaultFocusStyle,
+.LegacyChipComponent-checkbox-chip-sm-selected-useBrowserDefaultFocusStyle,
+.LegacyChipComponent-checkbox-chip-sm-isUsingKeyboard-useBrowserDefaultFocusStyle,
+.LegacyChipComponent-checkbox-chip-sm-selected-isUsingKeyboard-useBrowserDefaultFocusStyle {
+    margin: 0 !important;
+    align-items: flex-end;
+}
+
+.LegacyChipComponent-checkbox-chip-sm-useBrowserDefaultFocusStyle:hover,
+.LegacyChipComponent-checkbox-chip-sm-selected-useBrowserDefaultFocusStyle:hover,
+.LegacyChipComponent-checkbox-chip-sm-isUsingKeyboard-useBrowserDefaultFocusStyle:hover,
+.LegacyChipComponent-checkbox-chip-sm-selected-isUsingKeyboard-useBrowserDefaultFocusStyle:hover {
+    margin: 0 !important;
+    align-items: flex-end;
+}
+
+.main-nowPlayingView-coverArtContainer > div {
+    padding: 0;
+}
+
+.main-nowPlayingView-contextItemInfo {
+    padding: 0 16px;
+}
+
+.main-nowPlayingView-nowPlayingWidget {
+    margin-bottom: 0;
+}
+
+.NowPlayingView div:has([data-testId="NPV_Panel_OpenDiv"]) {
+    padding: 0px;
+    background: #242424;
+}
+
+div[data-testId="NPV_Panel_OpenDiv"] {
+    gap: 0px;
+}
+
+/* Right navbar > "Queue" Header */
+.NowPlayingView > div:nth-child(1) > div:nth-child(1),
+aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
+    background-image: linear-gradient(#656565, 50%, #404040);
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #202020;
+    z-index: 50;
+}
+
+aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
+    margin-bottom: 12px;
+}
+
+.NowPlayingView .cover-art > img {
+    border-bottom: 1px solid #373737;
+}
+
+.main-nowPlayingView-nowPlayingGrid {
+    gap: 0px;
+}
+
+.main-nowPlayingView-contextItemInfo {
+    padding: 16px;
+    background-image: linear-gradient(#656565, 50%, #404040);
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #373737;
+}
+
+.main-yourLibraryX-library {
+    border-radius: 0;
+}
+
+.main-yourLibraryX-header {
+    border-top: 1px solid #8b8b8b;
+    border-bottom: 1px solid #373737;
+    background-image: linear-gradient(#767676, 50%, #646464);
+    padding: 12px 16px;
+}
+
+.main-yourLibraryX-header .main-yourLibraryX-collapseButtonWrapper {
+    color: #373737;
+    text-shadow: 0px 1px #C0C0C0;
+    border-radius: 10px;
+}
+
+.main-yourLibraryX-header button,
+.x-filterBox-expandButton {
+    border-bottom: 1px solid #373737;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+}
+
+.main-yourLibraryX-filterArea {
+    margin: 0;
+    border-top: 1px solid #656565;
+    padding: 8px 16px;
+}
+
+.main-yourLibraryX-button .encore-text {
+    padding: 0 10px;
+    color: #373737;
+    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px;
+}
+
+aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] {
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    border-radius: 100px;
+    margin-right: 12px;
+}
+
+/* Left Navbar > Filter Carousel */
+.search-searchCategory-carouselButton,
+[class*="ChipClearComponent-chipClear-sm"] {
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+}
+
+/* Sort button */
+.Button-combobox-buttonTertiary-small-small-iconTrailing-useBrowserDefaultFocusStyle,
+.Button-combobox-buttonTertiary-small-small-iconTrailing-isUsingKeyboard-useBrowserDefaultFocusStyle,
+.x-sortBox-sortDropdown {
+    color: #202020;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    font-weight: bold !important;
+    border: 1px solid #202020;
+    border-radius: 4px;
+    padding: 0;
+    padding-inline: 8px 8px;
+}
+.Button-combobox-buttonTertiary-small-small-iconTrailing-useBrowserDefaultFocusStyle > .encore-text,
+.Button-combobox-buttonTertiary-small-small-iconTrailing-isUsingKeyboard-useBrowserDefaultFocusStyle > .encore-text,
+.x-sortBox-sortDropdown > span {
+    text-shadow: 0px 1px 1px #bbb;
+}
+.Button-combobox-buttonTertiary-small-small-iconTrailing-useBrowserDefaultFocusStyle:hover,
+.Button-combobox-buttonTertiary-small-small-iconTrailing-isUsingKeyboard-useBrowserDefaultFocusStyle:hover,
+.x-sortBox-sortDropdown:hover {
+    color: #202020;
+    transform: none !important;
+}
+.Button-combobox-buttonTertiary-small-small-iconTrailing-useBrowserDefaultFocusStyle:active,
+.Button-combobox-buttonTertiary-small-small-iconTrailing-isUsingKeyboard-useBrowserDefaultFocusStyle:active,
+.x-sortBox-sortDropdown:active {
+    background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
+    opacity: 1 !important;
+    transform: initial !important;
+}
+
+/* Left Navbar > Create New Dropdown Menu Item */
+.main-yourLibraryX-headerContent #context-menu .main-contextMenu-menuItemButton {
+    color: #202020;
+}
+.main-yourLibraryX-headerContent #context-menu .main-contextMenu-menuItemButton > span {
+    text-shadow: 0px 1px 1px #bbb;
+}
+.main-yourLibraryX-headerContent #context-menu .main-contextMenu-menuItemButton svg {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+}
+
+.search-searchCategory-carouselButton {
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+.x-filterBox-expandButton  {
+    border-radius: 50%;
+}
+
+/* Inset SVG Icons inside Buttons */
+.main-yourLibraryX-header button svg,
+.x-filterBox-expandButton svg,
+.search-searchCategory-carouselButton svg,
+[class*="ChipClearComponent-chipClear-sm"] svg,
+/* .main-loadingIndicator-loadingIcon svg, */
+aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] svg {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+}
+
+/* Bottom Bar > Left Icons > Drop Shadow */
+.main-nowPlayingWidget-nowPlaying svg {
+    filter: drop-shadow(0px 1px 1px #222);
+}
+
+/* Bottom Bar > Right Icons > Drop Shadow */
+.main-nowPlayingBar-extraControls svg {
+    filter: drop-shadow(0px 2px 1px #222);
+}
+
+.main-yourLibraryX-listItem svg {
+    filter: drop-shadow(0px 1px 1px #222);
+}
+
+.main-yourLibraryX-headerContent > .main-yourLibraryX-collapseButton button svg {
+    fill: #373737;
+    filter: invert(5%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+}
+
+/* Right Sidebar > Queue Padding */
+.main-yourLibraryX-libraryRootlist,
+aside[aria-label="Queue"] {
+    padding: 0;
+}
+
+aside[aria-label="Queue"] div:has(div > div[aria-labelledby="queue-tab"]) {
+    padding: 0;
+}
+
+/* Right Sidebar > Queue > Album Icon Border */
+aside[aria-label="Queue"] .HeaderSideAreaFlexContainer span {
+    border-radius: 0 !important;
+}
+
+/* Right Sidebar > Now Playing > Title */
+aside[aria-label="Queue"] .main-trackInfo-contentWrapper h1 {
+    text-shadow: 0px 2px 3px #000000b0;
+}
+/* Right Sidebar > Now Playing > Track Title */
+aside[aria-label="Queue"] .main-trackInfo-contentWrapper span > a {
+    text-shadow: 2px 2px 2px #000000b0;
+}
+
+.main-yourLibraryX-libraryRootlist ul li > dev:nth-child(1) 
+{
+    padding: 0 8px;
+}
+
+.main-yourLibraryX-libraryRootlist ul li,
+aside[aria-label="Queue"] ul li {
+    /* border-top: 1px solid #373737; */
+    /* border-bottom: 1px solid #606060; */
+}
+
+aside[aria-label="Queue"] ul li {
+    padding: 2px 16px;
+}
+
+.main-yourLibraryX-libraryRootlist ul li:nth-child(odd),
+aside[aria-label="Queue"] ul > div:nth-child(odd) > li {
+    background-color: #474747;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #606060;
+}
+
+.main-yourLibraryX-libraryRootlist ul li:nth-child(even),
+aside[aria-label="Queue"] ul > div:nth-child(even) > li {
+    background-color: #414141;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #606060;
+}
+
+/* Right Navbar > Queue */ 
+aside[aria-label="Queue"] div:has(div > div[aria-labelledby="queue-tab"]) > div:nth-child(1) {
+    padding-block-end: 0px;
+    padding-inline-end: 0px;
+}
+
+/* Right Navbar > Queue "Clear Queue" button position */
+#queue-panel > div > div > div:has(h2) {
+    gap: 0;
+    flex-flow: column-reverse;
+}
+
+/* Right Navbar > Queue > "Clear queue" button */
+#queue-panel .Button-buttonTertiary-small-small-useBrowserDefaultFocusStyle-condensed,
+#queue-panel .Button-buttonTertiary-small-small-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed {
+    width: 100%;
+    background-image: linear-gradient(#717171, #575757);
+    color: #cdcdcd;
+    text-shadow: 0px 2px rgb(0 0 0 / 50%);
+    border-radius: 0;
+    border-bottom: 1px solid #474747;
+    border-top: 1px solid #858585;
+}
+
+/* Right Navbar > Gap Between Queue Sections */
+#queue-panel > div {
+    gap: 0;
+}
+
+/* Right Navbar > Queue Headers */
+#queue-panel h2 {
+    background-image: linear-gradient(#838383, #515151);
+    color: #c5c5c5;
+    text-shadow: 0px 2px rgb(28 28 28 / 70%);
+    width: 100%;
+    padding: 8px 0px 8px 16px;
+}
+
+/* Right Navbar > Queue Headers */
+#queue-panel h2 > a {
+    color: #c5c5c5;
+    text-shadow: 0px 2px rgb(28 28 28 / 70%);
+}
+
+/* Library Navbar > Search Box */
+input.x-filterBox-filterInput {
+    border-radius: 100px;
+}
+.x-filterBox-expandedOrHasFilter .x-filterBox-filterInput {
+    background: #242424;
+    color: var(--text-subdued, #656565);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75) inset, 0 1px 0 rgb(96, 96, 96) !important;
+}
+.x-filterBox-expandedOrHasFilter .x-filterBox-filterInput::placeholder {
+    color: var(--text-subdued, #656565);
+}
+
+/* Song List > Play/Pause Icon */
+.main-trackList-rowMarker > button {
+    translate: 0 0;
+}
+
+/* Library Navbar > List Item Album Art */
+[class^="x-entityImage-"] {
+    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, .65);
+}
+
+/* Album Art Viewer */
+.GenericModal__overlay img {
+    border-radius: 0px;
+}
+
+/* Browse All Page > Category Card */
+section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div {
+    border-radius: 0px !important;
+    box-shadow: 0px 0px 9px 3px rgba(var(--spice-rgb-shadow), .5);
+}
+
+/* Browse All Page > Category Card > Album Art */
+section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
+    border-radius: 0px !important;
+}
+
+.Root__now-playing-bar {
+    background-image: linear-gradient(#656565, 40%, #404040);
+}
+
+.playback-progressbar > .progress-bar {
+    --progress-bar-height: 10px;
+}
+
+.x-progressBar-progressBarBg { 
+    box-shadow: inset 0px 6px 14px rgb(81 81 81 / 82%), inset 0 -6px 2px rgb(167 167 167);
+}
+
+.x-progressBar-fillColor {
+    /* background-image: linear-gradient(#F3FFDB, 5%, #85C701, #4B9208); */
+    background-image: linear-gradient(#b3d952, #4B9208);
+    border-top: 1px solid #ccff65;
+}
+
+
+/* Action Bar > Shuffle Button */
+.main-actionBar-ActionBar .Button-buttonTertiary-large-large-iconOnly-useBrowserDefaultFocusStyle-condensedAll {
+}
+
+/* /1* Album Page > "More by <artist>" Button *1/ */
+/* [class^="Areas__InteractiveArea-"] { */
+/*     border-radius: 100px; */
+/*     background-image: linear-gradient(#D0D0D0, 50%, #808080); */
+/*     padding: 0px 8px; */
+/* } */
+/* [class^="Areas__InteractiveArea-"] > a { */
+/*     color: #373737; */
+/* } */
+
+.progress-bar__slider {
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 16px 4px #00000060;
+}
+
+.volume-bar.main-nowPlayingBar-volumeBar .progress-bar__slider {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 0 8px 4px #00000030;
+}
+
+.main-card-imageContainer > div:nth-child(1) {
+    box-shadow: 0px 0px 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
+}
+
+/* Home Page > Shelf Background */
+[data-testid="component-shelf"],
+.main-home-content.contentSpacing > .main-shelf-shelf,
+.contentSpacing [data-testid="infinite-scroll-list"] .main-shelf-shelf {
+    background-color: #373737;
+    background-image: url(https://www.transparenttextures.com/patterns/low-contrast-linen.png);
+}
+
+.Root__now-playing-bar {
+    border-top: 1px solid #373737;
+}
+
+footer.main-nowPlayingBar-container {
+    padding: calc(var(--panel-gap));
+    border-top: 1px solid #858585;
+}
+
+.main-view-container__scroll-node-child {
+    overflow-x: hidden;
+}
+
+/* Main Page > Shelf > Scroll Buttons On Hover */
+main .search-searchCategory-contentArea:hover .search-searchCategory-carousel .search-searchCategory-carouselButton:nth-child(1) {
+    translate: 50px -14px;
+}
+main .search-searchCategory-contentArea:hover .search-searchCategory-carousel .search-searchCategory-carouselButton:nth-child(2) {
+    translate: -50px -14px;
+}
+
+.artist-artistOnTour-onTourShelfGrid {
+    padding: 0 var(--content-spacing);
+    margin-bottom: 16px;
+}
+
+time.artist-artistOnTour-date,
+time.artist-artistOnTour-date.artist-artistOnTour-elevated {
+    border-radius: 0;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    border: 1px solid #202020;
+}
+
+time.artist-artistOnTour-date > .artist-artistOnTour-dateMonth,
+time.artist-artistOnTour-date > .artist-artistOnTour-dateDay {
+    color: #303030;
+    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px !important;
+}
+
+section[data-testid="artist-page"] .contentSpacing > div:has(ul.artist-artistOnTour-onTourShelfGrid) > div {
+    background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
+    border-bottom: 1px solid #303030;
+    text-shadow: 0px 2px rgb(28 28 28 / 70%);
+    width: 100%;
+    padding: 8px 0px 8px 16px;
+}
+
+/* Bottom Bar > Control Buttons > Drop Shadow */
+.player-controls__buttons [class*="Button-checkbox-buttonTertiary-"] svg,
+.player-controls__buttons [class*="Button-buttonTertiary-"] svg
+{
+    filter: drop-shadow(0px 1px 1px #000);
+}
+
+[data-testid="control-button-playpause"] {
+    border: 1px solid #373737;
+}
+
+.main-connectBar-connectBar {
+    border-radius: 0px;
+}
+
+/* Right Navbar > Connect to a Device > Device Picker */
+aside#Desktop_PanelContainer_Id[aria-label="Connect to a device"] div[aria-labelledby="device-picker-header"] {
+    padding: 16px;
+    background-image: linear-gradient(#656565, 50%, #404040);
+    border-top: 1px solid #a1a1a1;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+/* Right Navbar > Connect to a Device > Device Picker > Start a Jam Button */
+aside#Desktop_PanelContainer_Id[aria-label="Connect to a device"] div[aria-labelledby="device-picker-header"] .ButtonInner-small-iconLeading {
+    background-image: linear-gradient(var(--background-base), var(--spice-button));
+    border: 1px solid #474747;
+}
+
+/* Shelf > Header > "Show all" link */
+[class*="Areas__HeaderArea-sc-"] a {
+    margin: 7px 10px 0px;
+    align-items: center;
+}
+
+/* Browse > Details List */
+.contentSpacing [data-testid="infinite-scroll-list"] {
+    padding: 0;
+    grid-gap: 0;
+}
