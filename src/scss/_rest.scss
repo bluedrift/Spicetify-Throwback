@@ -49,43 +49,6 @@
     box-shadow: 0 3px 3px rgb(0 0 0 / 55%) inset, inset 0 -1px 1px rgb(218 218 218) !important;
 }
 
-.main-globalNav-navLink:not(.main-globalNav-navLinkActive) .Svg-img-icon-medium,
-.main-actionButtons > button > svg {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
-}
-
-.ButtonInner-large-iconOnly svg,
-.ButtonInner-large-iconOnly-isUsingKeyboard svg {
-    filter: drop-shadow(0px 1px 0px #ccc);
-    transform: initial;
-}
-
-/* Circular Icon Buttons (Play, Home, Marketplace, etc.) */
-.main-globalNav-navLink,
-.main-userWidget-box,
-[class*=ButtonInner-medium],
-[class*=ButtonInner-large] {
-    background-image: linear-gradient(180deg, #F0F0F0, 40%, #808080);
-    border: 1px solid #505050;
-}
-.ButtonInner-small-iconOnly, 
-.ButtonInner-small-iconOnly-isUsingKeyboard {
-    background-image: linear-gradient(180deg, #F0F0F0, 40%, #808080);
-}
-.main-globalNav-navLink:active,
-.main-userWidget-box:active,
-.ButtonInner-medium-iconOnly:active,
-.ButtonInner-medium-iconOnly-isUsingKeyboard:active,
-.ButtonInner-large-iconOnly:active,
-.ButtonInner-large-iconOnly-isUsingKeyboard:active {
-    background-image: linear-gradient(180deg, #606060 20%, #B0B0B0);
-    border: 1px solid #505050;
-}
-.ButtonInner-small-iconOnly:active,
-.ButtonInner-small-iconOnly-isUsingKeyboard:active {
-    background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
-}
-
 /* Top Bar > Home Button (pressed) */
 .main-globalNav-navLink.main-globalNav-navLinkActive .Svg-img-icon-medium {
     filter: invert(100%) sepia(100%) saturate(1200%) hue-rotate(55deg) brightness(178%) contrast(120%) drop-shadow(0px 1px 0px #9b9)
@@ -784,41 +747,6 @@ aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
     border-bottom: 1px solid #373737;
 }
 
-.main-yourLibraryX-library {
-    border-radius: 0;
-}
-
-.main-yourLibraryX-header {
-    border-top: 1px solid #909090;
-    border-bottom: 1px solid #373737;
-    background-image: linear-gradient(#767676, 50%, #646464);
-    padding: 12px 16px;
-}
-
-.main-yourLibraryX-header .main-yourLibraryX-collapseButtonWrapper {
-    color: #373737;
-    text-shadow: 0px 1px #C0C0C0;
-    border-radius: 10px;
-}
-
-.main-yourLibraryX-header button,
-.x-filterBox-expandButton {
-    border-bottom: 1px solid #373737;
-    background-image: linear-gradient(#D0D0D0, 50%, #808080);
-}
-
-.main-yourLibraryX-filterArea {
-    margin: 0;
-    border-top: 1px solid #656565;
-    padding: 8px 16px;
-}
-
-.main-yourLibraryX-button span {
-    padding: 0;
-    color: #373737;
-    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px;
-}
-
 aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] {
     background-image: linear-gradient(#D0D0D0, 50%, #808080);
     border-radius: 100px;
@@ -873,18 +801,7 @@ aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] {
     filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
 }
 
-.search-searchCategory-carouselButton {
-    width: 24px;
-    height: 24px;
-    align-self: center;
-}
-
-.x-filterBox-expandButton  {
-    border-radius: 50%;
-}
-
 /* Inset SVG Icons inside Buttons */
-.x-filterBox-expandButton svg,
 .search-searchCategory-carouselButton svg,
 [class*="ChipClearComponent-chipClear-sm"] svg,
 /* .main-loadingIndicator-loadingIcon svg, */
@@ -1012,18 +929,6 @@ aside[aria-label="Queue"] div:has(div > div[aria-labelledby="queue-tab"]) > div:
     text-shadow: 0px 2px rgb(28 28 28 / 70%);
 }
 
-/* Library Navbar > Search Box */
-input.x-filterBox-filterInput {
-    border-radius: 100px;
-}
-.x-filterBox-expandedOrHasFilter .x-filterBox-filterInput {
-    background: #242424;
-    color: var(--text-subdued, #656565);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75) inset, 0 1px 0 rgb(96, 96, 96) !important;
-}
-.x-filterBox-expandedOrHasFilter .x-filterBox-filterInput::placeholder {
-    color: var(--text-subdued, #656565);
-}
 
 /* Song List > Play/Pause Icon */
 .main-trackList-rowMarker > button {

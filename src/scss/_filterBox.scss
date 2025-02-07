@@ -1,0 +1,22 @@
+@import 'mixins';
+
+/* Search Icon Button (collapsed) */
+.x-filterBox-expandButton  {
+    border-radius: 50%;
+    border-bottom: 1px solid #373737;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+}
+@include svg-icon(".x-filterBox-expandButton", true);
+
+/* Library Navbar/Playlist Page > Search Box */
+input.x-filterBox-filterInput {
+    border-radius: 100px;
+}
+.x-filterBox-expandedOrHasFilter .x-filterBox-filterInput {
+    background: #242424;
+    color: var(--text-subdued, #656565);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75) inset, 0 1px 0 rgb(96, 96, 96) !important;
+}
+.x-filterBox-expandedOrHasFilter .x-filterBox-filterInput::placeholder {
+    color: var(--text-subdued, #656565);
+}

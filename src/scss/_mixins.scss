@@ -1,0 +1,9 @@
+@mixin svg-icon($name, $invert) {
+  #{$name} svg {
+    @if $invert {
+      filter: invert(100%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+    } @else {
+      filter: hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+    }
+  }
+}
