@@ -1,3 +1,21 @@
+.main-shelf-subHeader,
+.main-shelf-shelfGrid {
+    padding: 0 var(--content-spacing);
+}
+
+.main-shelf-subHeader > div:has(button) {
+    margin-block: 0px;
+    margin-top: 8px;
+}
+
+.main-shelf-shelfGrid {
+    margin-bottom: 10px;
+}
+
+section.main-shelf-shelf {
+    margin: 0;
+}
+
 /* Carousel Buttons */
 .search-searchCategory-carouselButton {
     width: 24px;

@@ -1,3 +1,5 @@
+@import "mixins";
+
 /* Circular Icon Buttons (Play, Home, Marketplace, etc.) */
 .main-globalNav-navLink:not(.main-globalNav-navLinkActive) .Svg-img-icon-medium,
 .main-actionButtons > button > svg {
@@ -24,5 +26,45 @@
     border: none;
     &:active { 
         border: none;
+    }
+}
+
+
+/* Sort button */
+[class*=Button-combobox-buttonTertiary-small],
+aside[aria-label=Queue] [class*=Button-buttonTertiary-small],
+.x-sortBox-sortDropdown {
+    color: #202020;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    font-weight: bold !important;
+    border: 1px solid #202020;
+    border-radius: 4px;
+    padding: 0;
+    padding-inline: 8px 8px;
+
+    span {
+        text-shadow: 0px 1px 1px #bbb;
+    }
+
+    &:hover {
+        color: #202020;
+        transform: none !important;
+    }
+
+    &:active {
+        background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
+        opacity: 1 !important;
+        transform: initial !important;
+    }
+}
+
+/* Chip/Tag */
+[class*=LegacyChipComponent-checkbox-chip-sm] {
+    margin: 0 !important;
+    align-items: flex-end;
+
+    &:hover {
+        margin: 0 !important;
+        align-items: flex-end;
     }
 }

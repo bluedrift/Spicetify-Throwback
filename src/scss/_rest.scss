@@ -75,13 +75,12 @@
 }
 
 /* Top Bar > Navigation Buttons */
-.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed,
-.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-useBrowserDefaultFocusStyle-condensed {
+.main-globalNav-historyButtons [class*=Button-buttonTertiary-medium] {
     color: #3D3D3D !important;
-}
-.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed:hover,
-.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-useBrowserDefaultFocusStyle-condensed:hover {
-    color: #505050 !important;
+
+    &:hover {
+      color: #505050 !important;
+    }
 }
 
 .main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-disabled-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed,
@@ -195,8 +194,8 @@ button:hover {
 }
 
 /* Track List Header > Column Names */
-.main-trackList-column > .encore-text.encore-text-body-small,
-[data-testId="column-header-context-menu"] > .encore-text.encore-text-body-small,
+.main-trackList-column > .encore-text-body-small,
+[data-testId="column-header-context-menu"] > .encore-text-body-small,
 .main-trackList-rowSectionIndex[role="columnheader"] {
     color: black;
     font-weight: bold;
@@ -261,15 +260,6 @@ section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"
 
 .main-entityHeader-image {
     border-radius: 0px;
-}
-
-/* Various Text > Drop Shadows */
-.main-nowPlayingBar-nowPlayingBar .encore-text,
-.main-rootlist-wrapper .encore-text,
-aside[aria-label="Queue"] ul li .encore-text,
-.main-shelf-shelfGrid div,
-aside[aria-label="Connect to a device"] .encore-text {
-    text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 .StyledTabList-tablist-tabList {
@@ -664,132 +654,6 @@ section.main-shelf-shelf > .main-shelf-header {
     padding: 0px;
 }
 
-.main-shelf-subHeader,
-.main-shelf-shelfGrid {
-    padding: 0 var(--content-spacing);
-}
-
-.main-shelf-subHeader > div:has(button) {
-    margin-block: 0px;
-    margin-top: 8px;
-}
-
-.main-shelf-shelfGrid {
-    margin-bottom: 10px;
-}
-
-section.main-shelf-shelf {
-    margin: 0;
-}
-
-.LegacyChipComponent-checkbox-chip-sm-useBrowserDefaultFocusStyle,
-.LegacyChipComponent-checkbox-chip-sm-selected-useBrowserDefaultFocusStyle,
-.LegacyChipComponent-checkbox-chip-sm-isUsingKeyboard-useBrowserDefaultFocusStyle,
-.LegacyChipComponent-checkbox-chip-sm-selected-isUsingKeyboard-useBrowserDefaultFocusStyle {
-    margin: 0 !important;
-    align-items: flex-end;
-}
-
-.LegacyChipComponent-checkbox-chip-sm-useBrowserDefaultFocusStyle:hover,
-.LegacyChipComponent-checkbox-chip-sm-selected-useBrowserDefaultFocusStyle:hover,
-.LegacyChipComponent-checkbox-chip-sm-isUsingKeyboard-useBrowserDefaultFocusStyle:hover,
-.LegacyChipComponent-checkbox-chip-sm-selected-isUsingKeyboard-useBrowserDefaultFocusStyle:hover {
-    margin: 0 !important;
-    align-items: flex-end;
-}
-
-.main-nowPlayingView-coverArtContainer > div {
-    padding: 0;
-}
-
-.main-nowPlayingView-contextItemInfo {
-    padding: 0 16px;
-}
-
-.main-nowPlayingView-nowPlayingWidget {
-    margin-bottom: 0;
-}
-
-.NowPlayingView div:has([data-testId="NPV_Panel_OpenDiv"]) {
-    padding: 0px;
-    background: #242424;
-}
-
-div[data-testId="NPV_Panel_OpenDiv"] {
-    gap: 0px;
-}
-
-/* Right navbar > "Queue" Header */
-.NowPlayingView > div:nth-child(1) > div:nth-child(1),
-aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
-    background-image: linear-gradient(#656565, 50%, #404040);
-    border-top: 1px solid #808080;
-    border-bottom: 1px solid #202020;
-    z-index: 50;
-}
-
-aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
-    margin-bottom: 12px;
-}
-
-.NowPlayingView .cover-art > img {
-    border-bottom: 1px solid #373737;
-}
-
-.main-nowPlayingView-nowPlayingGrid {
-    gap: 0px;
-}
-
-.main-nowPlayingView-contextItemInfo {
-    padding: 16px;
-    background-image: linear-gradient(#656565, 50%, #404040);
-    border-top: 1px solid #707070;
-    border-bottom: 1px solid #373737;
-}
-
-aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] {
-    background-image: linear-gradient(#D0D0D0, 50%, #808080);
-    border-radius: 100px;
-    margin-right: 12px;
-}
-
-/* Left Navbar > Filter Carousel */
-.search-searchCategory-carouselButton,
-[class*="ChipClearComponent-chipClear-sm"] {
-    background-image: linear-gradient(#D0D0D0, 50%, #808080);
-}
-
-/* Sort button */
-.Button-combobox-buttonTertiary-small-small-iconTrailing-useBrowserDefaultFocusStyle,
-.Button-combobox-buttonTertiary-small-small-iconTrailing-isUsingKeyboard-useBrowserDefaultFocusStyle,
-.x-sortBox-sortDropdown {
-    color: #202020;
-    background-image: linear-gradient(#D0D0D0, 50%, #808080);
-    font-weight: bold !important;
-    border: 1px solid #202020;
-    border-radius: 4px;
-    padding: 0;
-    padding-inline: 8px 8px;
-}
-.Button-combobox-buttonTertiary-small-small-iconTrailing-useBrowserDefaultFocusStyle > .encore-text,
-.Button-combobox-buttonTertiary-small-small-iconTrailing-isUsingKeyboard-useBrowserDefaultFocusStyle > .encore-text,
-.x-sortBox-sortDropdown > span {
-    text-shadow: 0px 1px 1px #bbb;
-}
-.Button-combobox-buttonTertiary-small-small-iconTrailing-useBrowserDefaultFocusStyle:hover,
-.Button-combobox-buttonTertiary-small-small-iconTrailing-isUsingKeyboard-useBrowserDefaultFocusStyle:hover,
-.x-sortBox-sortDropdown:hover {
-    color: #202020;
-    transform: none !important;
-}
-.Button-combobox-buttonTertiary-small-small-iconTrailing-useBrowserDefaultFocusStyle:active,
-.Button-combobox-buttonTertiary-small-small-iconTrailing-isUsingKeyboard-useBrowserDefaultFocusStyle:active,
-.x-sortBox-sortDropdown:active {
-    background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
-    opacity: 1 !important;
-    transform: initial !important;
-}
-
 /* Inset SVG Icons inside Buttons */
 .search-searchCategory-carouselButton svg,
 [class*="ChipClearComponent-chipClear-sm"] svg,
@@ -806,88 +670,6 @@ aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] svg {
 /* Bottom Bar > Right Icons > Drop Shadow */
 .main-nowPlayingBar-extraControls svg {
     filter: drop-shadow(0px 2px 1px #222);
-}
-
-/* Right Sidebar > Queue Padding */
-aside[aria-label="Queue"] {
-    padding: 0;
-}
-
-aside[aria-label="Queue"] div:has(div > div[aria-labelledby="queue-tab"]) {
-    padding: 0;
-}
-
-/* Right Sidebar > Queue > Album Icon Border */
-aside[aria-label="Queue"] .HeaderSideAreaFlexContainer span {
-    border-radius: 0 !important;
-}
-
-/* Right Sidebar > Now Playing > Title */
-aside[aria-label="Queue"] .main-trackInfo-contentWrapper h1 {
-    text-shadow: 0px 2px 3px #000000b0;
-}
-/* Right Sidebar > Now Playing > Track Title */
-aside[aria-label="Queue"] .main-trackInfo-contentWrapper span > a {
-    text-shadow: 2px 2px 2px #000000b0;
-}
-
-aside[aria-label="Queue"] ul li {
-    padding: 2px 16px;
-}
-
-/* Right Navbar > Queue */ 
-aside[aria-label="Queue"] div:has(div > div[aria-labelledby="queue-tab"]) > div:nth-child(1) {
-    padding-block-end: 0px;
-    padding-inline-end: 0px;
-}
-
-/* Right Navbar > Queue "Clear Queue" button position */
-#queue-panel > div > div > div:has(h2) {
-    gap: 0;
-    flex-flow: column-reverse;
-}
-
-/* Right Navbar > Queue > "Clear queue" button */
-#queue-panel .Button-buttonTertiary-small-small-useBrowserDefaultFocusStyle-condensed,
-#queue-panel .Button-buttonTertiary-small-small-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed {
-    width: 100%;
-    background-image: linear-gradient(#717171, #575757);
-    color: #cdcdcd;
-    text-shadow: 0px 2px rgb(0 0 0 / 50%);
-    border-radius: 0;
-    border-bottom: 1px solid #474747;
-    border-top: 1px solid #858585;
-}
-
-/* Right Navbar > Gap Between Queue Sections */
-#queue-panel > div {
-    gap: 0;
-}
-
-/* Right Navbar > Queue Headers */
-#queue-panel h2 {
-    background-image: linear-gradient(#838383, #515151);
-    color: #c5c5c5;
-    text-shadow: 0px 2px rgb(28 28 28 / 70%);
-    width: 100%;
-    padding: 8px 0px 8px 16px;
-}
-
-/* Right Navbar > Queue Headers */
-#queue-panel h2 > a {
-    color: #c5c5c5;
-    text-shadow: 0px 2px rgb(28 28 28 / 70%);
-}
-
-
-/* Song List > Play/Pause Icon */
-.main-trackList-rowMarker > button {
-    translate: 0 0;
-}
-
-/* Album Art Viewer */
-.GenericModal__overlay img {
-    border-radius: 0px;
 }
 
 /* Browse All Page > Category Card */

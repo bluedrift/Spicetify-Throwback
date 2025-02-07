@@ -1,0 +1,101 @@
+@import "mixins";
+
+/* Various Text > Drop Shadows */
+// TODO
+.main-nowPlayingBar-nowPlayingBar span,
+.main-rootlist-wrapper span,
+aside[aria-label="Queue"] ul li span,
+.main-shelf-shelfGrid div,
+aside[aria-label="Connect to a device"] span {
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Right Sidebar > Queue Padding */
+aside[aria-label="Queue"] {
+  padding: 0;
+
+  /* Queue Tabs */
+  div:has(div > div[aria-labelledby="queue-tab"]) {
+    padding: 0;
+
+    > div:nth-child(1) {
+      padding-block-end: 0px;
+      padding-inline-end: 0px;
+    }
+  }
+
+  /* Right Sidebar > Queue > Album Icon Border */
+  .HeaderSideAreaFlexContainer span {
+    border-radius: 0 !important;
+  }
+
+  /* Right Sidebar > Now Playing > Title */
+  .main-trackInfo-contentWrapper h1 {
+    text-shadow: 0px 2px 3px #000000b0;
+  }
+
+  /* Right Sidebar > Now Playing > Track Title */
+  .main-trackInfo-contentWrapper span > a {
+    text-shadow: 2px 2px 2px #000000b0;
+  }
+
+  ul li {
+    padding: 2px 16px;
+  }
+
+  /* Close Button */
+  div[data-testid="PanelHeader_CloseButton"] {
+    padding-right: 12px;
+    @include svg-icon("");
+  }
+}
+
+#queue-panel {
+  /* Right Navbar > Queue "Clear Queue" button position */
+  > div > div > div:has(h2) {
+    gap: 0;
+    flex-flow: column-reverse;
+  }
+
+  /* Right Navbar > Queue > "Clear queue" button */
+  #queue-panel [class*=Button-buttonTertiary-small] {
+    width: 100%;
+    background-image: linear-gradient(#717171, #575757);
+    color: #cdcdcd;
+    text-shadow: 0px 2px rgb(0 0 0 / 50%);
+    border-radius: 0;
+    border-bottom: 1px solid #474747;
+    border-top: 1px solid #858585;
+  }
+
+  /* Right Navbar > Gap Between Queue Sections */
+  > div {
+    gap: 0;
+  }
+
+
+  /* Queue Headers */
+  h2 {
+    background-image: linear-gradient(#838383, #515151);
+    color: #c5c5c5;
+    text-shadow: 0px 2px rgb(28 28 28 / 70%);
+    width: 100%;
+    padding: 8px 0px 8px 16px;
+
+    > a {
+      color: #c5c5c5;
+      text-shadow: 0px 2px rgb(28 28 28 / 70%);
+    }
+  }
+}
+
+/* Song List > Play/Pause Icon */
+.main-trackList-rowMarker > button {
+  translate: 0 0;
+}
+
+/* Album Art Viewer */
+.GenericModal__overlay img {
+  border-radius: 0px;
+}

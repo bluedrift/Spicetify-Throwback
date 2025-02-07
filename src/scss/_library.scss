@@ -34,7 +34,6 @@ aside[aria-label="Queue"] ul > div:nth-child(even) > li {
     }
 }
 
-
 .main-yourLibraryX-header {
     border-top: 1px solid #909090;
     border-bottom: 1px solid #373737;
@@ -88,4 +87,11 @@ aside[aria-label="Queue"] ul > div:nth-child(even) > li {
 
 .main-yourLibraryX-listItem svg {
     filter: drop-shadow(0px 1px 1px #222);
+}
+
+
+/* Left Navbar > Filter Carousel */
+.search-searchCategory-carouselButton,
+[class*="ChipClearComponent-chipClear-sm"] {
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
 }
