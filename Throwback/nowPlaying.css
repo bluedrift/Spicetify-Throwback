@@ -1,0 +1,56 @@
+.main-nowPlayingView-coverArtContainer > div {
+  padding: 0;
+}
+
+.main-nowPlayingView-contextItemInfo {
+  padding: 0 16px;
+}
+
+.main-nowPlayingView-nowPlayingWidget {
+  margin-bottom: 0;
+}
+
+.NowPlayingView div:has([data-testId=NPV_Panel_OpenDiv]) {
+  padding: 0px;
+  background: #242424;
+}
+
+div[data-testId=NPV_Panel_OpenDiv] {
+  gap: 0px;
+}
+
+/* Right navbar > "Queue" Header */
+.NowPlayingView > div:nth-child(1) > div:nth-child(1),
+aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
+  background-image: linear-gradient(#656565, 50%, #404040);
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #202020;
+  z-index: 50;
+}
+
+aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
+  margin-bottom: 12px;
+}
+
+.NowPlayingView .cover-art > img {
+  border-bottom: 1px solid #373737;
+}
+
+.main-nowPlayingView-nowPlayingGrid {
+  gap: 0px;
+}
+
+.main-nowPlayingView-contextItemInfo {
+  padding: 16px;
+  background-image: linear-gradient(#656565, 50%, #404040);
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #373737;
+}
+
+aside[aria-label=Queue] [data-testid=PanelHeader_CloseButton] {
+  background-image: linear-gradient(#D0D0D0, 50%, #808080);
+  border-radius: 100px;
+  margin-right: 12px;
+}
+
+/*# sourceMappingURL=nowPlaying.css.map */

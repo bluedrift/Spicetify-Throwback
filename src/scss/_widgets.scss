@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins" as *;
 
 /* Circular Icon Buttons (Play, Home, Marketplace, etc.) */
 .main-globalNav-navLink:not(.main-globalNav-navLinkActive) .Svg-img-icon-medium,

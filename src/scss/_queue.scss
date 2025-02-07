@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins" as *;
 
 /* Various Text > Drop Shadows */
 // TODO
@@ -46,7 +46,7 @@ aside[aria-label="Queue"] {
 
   /* Close Button */
   div[data-testid="PanelHeader_CloseButton"] {
-    padding-right: 12px;
+    margin-right: 12px;
     @include svg-icon("");
   }
 }
