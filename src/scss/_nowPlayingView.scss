@@ -1,3 +1,7 @@
+//
+// Now Playing sidebar (right of screen)
+//
+
 .main-nowPlayingView-coverArtContainer > div {
     padding: 0;
 }
@@ -51,4 +55,15 @@ aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] {
     background-image: linear-gradient(#D0D0D0, 50%, #808080);
     border-radius: 100px;
     margin-right: 12px;
+}
+
+/* Now Playing View > Border Radius */
+.main-coverSlotCollapsed-navAltContainer, .main-nowPlayingView-coverArt,
+.main-nowPlayingView-aboutArtistV2Image,
+.main-nowPlayingView-aboutArtistV2Button {
+    border-radius: 0;
+}
+
+.main-nowPlayingView-section {
+    border-radius: 0;
 }

@@ -1,6 +1,64 @@
 @use "mixins" as *;
 
-/* Circular Icon Buttons (Play, Home, Marketplace, etc.) */
+//
+// General text styles
+//
+
+.encore-text-body-small {
+    font-size: 14px;
+}
+
+.encore-text-body-medium {
+    font-size: 15px;
+}
+
+/* Album/Playlist Page > Album/Playlist Title */
+.encore-text-headline-large {
+    font-size: var(--encore-text-size-larger-4) !important;
+    text-shadow: 4px 4px 5px rgb(0 0 0 / 40%);
+    font-weight: bold;
+}
+
+.encore-text-title-small {
+    text-shadow: 1px 1px 4px rgb(0 0 0 / 60%);
+}
+
+//
+// General button styles
+//
+
+button:hover {
+    transform: initial !important;
+    filter: brightness(115%);
+}
+
+.Button-buttonPrimary-useBrowserDefaultFocusStyle-data-is-icon-only:hover > span {
+    transform: initial !important;
+}
+
+/* Inset SVG Icons inside buttons */
+.search-searchCategory-carouselButton svg,
+[class*="ChipClearComponent-chipClear-sm"] svg,
+/* .main-loadingIndicator-loadingIcon svg, */
+aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] svg {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0 1px 0 #ccc);
+}
+
+//
+// General image styles
+//
+
+.main-entityHeader-image {
+    border-radius: 0;
+}
+
+//
+// Circular Icon Buttons
+//
+// - Top Bar > Home/Marketplace Buttons
+// - Various Locations > Play Button
+//
+
 .main-globalNav-navLink:not(.main-globalNav-navLinkActive) .Svg-img-icon-medium,
 .main-actionButtons > button > svg {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0 1px 0 #ccc);
@@ -32,7 +90,42 @@
 }
 
 
-/* Sort button */
+//
+// Rectangular text buttons
+//
+// - About the Artist > "Follow" Button
+// - Artist Page > "Follow" Button
+//
+
+.Button-buttonSecondary-small-useBrowserDefaultFocusStyle,
+.Button-buttonSecondary-small-isUsingKeyboard-useBrowserDefaultFocusStyle {
+    border: 1px solid #373737;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    color: black;
+    text-shadow: 0 1px #C0C0C0;
+}
+
+.Button-buttonSecondary-small-useBrowserDefaultFocusStyle:hover,
+.Button-buttonSecondary-small-isUsingKeyboard-useBrowserDefaultFocusStyle:hover {
+    transform: initial !important;
+    border: 1px solid #373737;
+}
+
+.Button-buttonSecondary-small-useBrowserDefaultFocusStyle:active,
+.Button-buttonSecondary-small-isUsingKeyboard-useBrowserDefaultFocusStyle:active {
+    background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
+    opacity: 1 !important;
+    transform: initial !important;
+}
+
+
+//
+// Sort buttons
+//
+// - My Library > Sort
+// - Playlist View > Sort
+//
+
 [class*="Button-combobox-buttonTertiary-small"],
 aside[aria-label="Queue"] [class*="Button-buttonTertiary-small"],
 .x-sortBox-sortDropdown {
@@ -60,7 +153,13 @@ aside[aria-label="Queue"] [class*="Button-buttonTertiary-small"],
     }
 }
 
-/* Chip/Tag */
+//
+// Chip/Tag widgets
+//
+// - My Library > Filter Criteria
+// - Home Page > Filter Criteria
+//
+
 [class*="LegacyChipComponent-checkbox-chip-sm"] {
     margin: 0 !important;
     align-items: flex-end;
@@ -69,4 +168,168 @@ aside[aria-label="Queue"] [class*="Button-buttonTertiary-small"],
         margin: 0 !important;
         align-items: flex-end;
     }
+}
+
+.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm,
+.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm::after {
+    /* background-color: var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)); */
+    background: #707070;
+}
+
+.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm::before {
+    border-color: transparent #707070 transparent transparent;
+}
+
+.ChipInnerComponent-sm, .ChipInnerComponent-sm-isUsingKeyboard,
+.ChipInnerComponent-sm-selected, .ChipInnerComponent-sm-selected-isUsingKeyboard,
+.ChipInnerComponent-sm-selected-secondary, .ChipInnerComponent-sm-selected-secondary-isUsingKeyboard
+{
+    box-sizing: initial;
+    -webkit-tap-highlight-color: initial;
+    border-radius: initial;
+    transition: initial;
+    display: initial;
+    min-inline-size: initial;
+    min-block-size: initial;
+    -webkit-box-align: initial;
+    align-items: initial;
+    padding-block: initial;
+    padding-inline: initial;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    font-size: 11px;
+    margin: 2px 5px 2px 12px;
+    padding: 0 10px 0 12px;
+    background: #545454;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 50%));
+}
+
+.ChipInnerComponent-sm::before, .ChipInnerComponent-sm-isUsingKeyboard::before,
+.ChipInnerComponent-sm-selected::before, .ChipInnerComponent-sm-selected-isUsingKeyboard::before  {
+    content: "";
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-color: transparent #545454 transparent transparent;
+    border-style: solid;
+    border-width: 12px 12px 12px 0;
+}
+
+.ChipInnerComponent-sm::after, .ChipInnerComponent-sm-isUsingKeyboard::after,
+.ChipInnerComponent-sm-selected::after, .ChipInnerComponent-sm-selected-isUsingKeyboard::after  {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    float: left;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: #808080;
+    box-shadow: -1px -1px 2px #004977;
+}
+
+.ChipInnerComponent-sm-selected, .ChipInnerComponent-sm-selected-isUsingKeyboard,
+.ChipInnerComponent-sm-selected-secondary, .ChipInnerComponent-sm-selected-secondary-isUsingKeyboard {
+    background: #BBB;
+    color: black;
+}
+
+.ChipInnerComponent-sm-selected::before, .ChipInnerComponent-sm-selected-isUsingKeyboard::before  {
+    border-color: transparent #BBB transparent transparent;
+}
+
+
+//
+// Tab widgets
+//
+// - Queue > "Queue/Recently Played" Switcher
+//
+
+.StyledTabList-tablist-tabList {
+    padding: 0;
+    margin: 4px;
+}
+
+.StyledTabList-tablist-tabList > button {
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    color: #272727;
+    text-shadow: 0 1px #C0C0C0;
+    border-right: 1px solid #272727;
+    border-top: 1px solid #272727;
+    border-bottom: 1px solid #272727;
+}
+
+.StyledTabList-tablist-tabList > button:first-child {
+    border-left: 1px solid #272727;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.StyledTabList-tablist-tabList > button:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+[class*="StyledTabItem-tab-tabItem"]:hover {
+    color: #272727;
+}
+
+[class*="StyledTabItem-tab-tabItem"]:active {
+    background-image: linear-gradient(180deg, #606060 20%, #B0B0B0);
+    color: #272727;
+}
+
+[class*="StyledTabItem-tab-tabItem"][aria-selected="true"] {
+    background-image: linear-gradient(180deg, #999, #595959);
+    color: #C8C8C8;
+    text-shadow: 0 2px #404040;
+}
+
+[class*="StyledTabItem-tab-tabItem"][aria-selected="true"]:active {
+    background-image: linear-gradient(#595959, 20%, #999) !important;
+}
+
+//
+// Artist On Tour widgets
+//
+// - Artist Page > On Tour Section
+// - Now Playing Sidebar > On Tour Section
+//
+
+.artist-artistOnTour-onTourShelfGrid {
+    padding: 0 var(--content-spacing);
+    margin-bottom: 16px;
+}
+
+time.artist-artistOnTour-date,
+time.artist-artistOnTour-date.artist-artistOnTour-elevated {
+    border-radius: 0;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    border: 1px solid #202020;
+}
+
+time.artist-artistOnTour-date > .artist-artistOnTour-dateMonth,
+time.artist-artistOnTour-date > .artist-artistOnTour-dateDay {
+    color: #303030;
+    text-shadow: rgb(255 255 255 / 50%) 0 1px 1px !important;
+}
+
+section[data-testid="artist-page"] .contentSpacing > div:has(ul.artist-artistOnTour-onTourShelfGrid) > div {
+    background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
+    border-bottom: 1px solid #303030;
+    text-shadow: 0 2px rgb(28 28 28 / 70%);
+    width: 100%;
+    padding: 8px 0 8px 16px;
 }

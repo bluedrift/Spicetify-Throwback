@@ -1,3 +1,8 @@
+.main-shelf-header {
+    background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
+    border-bottom: 1px solid #303030;
+}
+
 .main-shelf-subHeader,
 .main-shelf-shelfGrid {
     padding: 0 var(--content-spacing);
@@ -21,4 +26,27 @@ section.main-shelf-shelf {
     width: 24px;
     height: 24px;
     align-self: center;
+}
+
+.main-gridContainer-gridContainer > div > h2 {
+    background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
+    border-bottom: 1px solid #303030;
+    padding: 4px 10px;
+    margin-block-end: 0 !important;
+    min-block-size: 0;
+}
+
+/* Main Page > Shelf > Scroll Buttons On Hover */
+main .search-searchCategory-contentArea:hover .search-searchCategory-carousel .search-searchCategory-carouselButton:nth-child(1) {
+    translate: 50px -14px;
+}
+
+main .search-searchCategory-contentArea:hover .search-searchCategory-carousel .search-searchCategory-carouselButton:nth-child(2) {
+    translate: -50px -14px;
+}
+
+// Shelf > Header > "Show all" link (home page recommendations)
+[class*="Areas__HeaderArea-sc-"] a {
+    margin: 7px 10px 0;
+    align-items: center;
 }

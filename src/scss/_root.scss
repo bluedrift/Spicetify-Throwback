@@ -1,0 +1,77 @@
+.Root__top-container {
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.Root__globalNav {
+    height: calc(48px + 24px);
+    padding: calc(var(--panel-gap));
+    padding-bottom: 0;
+    translate: 0 -8px;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    border-bottom: 1px solid #373737;
+}
+
+.spotify__container--is-desktop.spotify__os--is-windows .Root__globalNav {
+    padding-inline: calc(64px - 4px*var(--zoom-level, 0)) calc(164px - 12px*var(--zoom-level, 0));
+}
+
+.Root__nav-bar {
+    border-right: 1px solid #373737;
+}
+
+.Root__right-sidebar {
+    border-left: 1px solid #373737;
+}
+
+.Root__right-sidebar aside {
+    border-radius: 0;
+}
+
+.Root__right-sidebar aside > div::before {
+    background: red;
+}
+
+.Root__main-view {
+    border-radius: 0;
+}
+
+.Root__nav-bar, .Root__main-view, .Root__right-sidebar {
+    /* border-top: 1px solid #C0C0C0; */
+}
+
+.main-topBar-searchBar {
+    border-radius: 10px !important;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 55%) inset, inset 0 -1px 1px rgb(218 218 218) !important;
+}
+
+/* Top Bar > Home Button (pressed) */
+.main-globalNav-navLink.main-globalNav-navLinkActive .Svg-img-icon-medium {
+    filter: invert(100%) sepia(100%) saturate(1200%) hue-rotate(55deg) brightness(178%) contrast(120%) drop-shadow(0 1px 0 #9b9)
+}
+
+/* Top Bar > Navigation Buttons */
+.main-globalNav-historyButtons [class*="Button-buttonTertiary-medium"] {
+    color: #3D3D3D !important;
+
+    &:hover {
+      color: #505050 !important;
+    }
+}
+
+.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-disabled-isUsingKeyboard-useBrowserDefaultFocusStyle-condensed,
+.main-globalNav-historyButtons .Button-buttonTertiary-medium-medium-iconOnly-disabled-useBrowserDefaultFocusStyle-condensed {
+    color: #505050 !important;
+}
+
+/* Notification Dot */
+.main-userWidget-notificationDot {
+  color: #f00
+}
+
+// FIXME this is a hack caused by setting the root container gaps to 0 messing up overflow!
+.main-view-container__scroll-node-child {
+    overflow-x: hidden;
+}

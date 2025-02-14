@@ -1,39 +1,31 @@
 /* 
  * Spicetify Throwback
  *
+ * A fun, nostalgic, and skeuomorphic theme for Spotify Desktop
+ *
  * Tested with:
- * Spotify for Windows 1.2.53.440.g7bf582a
- * Spicetify v2.38.7
+ * Spotify for Windows 1.2.57.463.g4f748c64
+ * Spicetify v2.39.2
  */
 
+// Themes
 @use 'themes';
+
+// Widgets
+@use 'webkit';
+@use 'adblock';
 @use 'widgets';
 @use 'shelf';
 @use 'filterBox';
+@use 'trackList';
+
+// Main View
+@use 'root';
+@use 'page';
+@use 'bottomBar';
+
+// Sidebars
 @use 'library';
 @use 'queue';
-@use 'nowPlaying';
-@use 'rest';
-
-* {
-    -webkit-font-smoothing: none !important;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #c1c1c1;
-  border-radius: 4px;
-}
-
-/* Remove Upgrade Button, User Name, Ads */
-.main-topBar-UpgradeButton,
-.main-userWidget-displayName,
-.main-leaderboardComponent-container,
-.main-billboardComponent-footer,
-.Root__modal-slot,
-.main-minimizedVideoTakeover-videoAdContainer {
-  display: none
-}
+@use 'connectDevice';
+@use 'nowPlayingView';

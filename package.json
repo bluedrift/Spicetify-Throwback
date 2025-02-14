@@ -1,7 +1,12 @@
 {
   "type": "module",
   "devDependencies": {
+    "prettier": "3.5.1",
     "stylelint": "^16.14.1",
     "stylelint-config-standard-scss": "^14.0.0"
+  },
+  "scripts": {
+    "build": "just build",
+    "watch": "just watch"
   }
 }

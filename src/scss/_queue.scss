@@ -100,3 +100,8 @@ aside[aria-label="Queue"] {
 .GenericModal__overlay img {
   border-radius: 0;
 }
+
+/* Queue Item > Album Art Icon */
+[class^="x-entityImage-"] {
+  border-radius: 0;
+}

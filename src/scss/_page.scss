@@ -1,0 +1,291 @@
+.playlist-playlist-playlist .main-trackList-trackListRow, .main-rootlist-wrapper,
+section[data-testid="album-page"] .main-trackList-trackListRow, .main-rootlist-wrapper {
+    /* --row-height: 32px !important; */
+    border-radius: 0;
+}
+
+/* .main-gridContainer-gridContainer { */
+/*     margin-top: 10px; */
+/* } */
+
+/* Track List > Track Item Background */
+section[data-testid="album-page"] .main-rootlist-wrapper > [role="presentation"] > [role="presentation"]:nth-child(odd) .main-trackList-trackListRow,
+section[data-testid="playlist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(odd) .main-trackList-trackListRow,
+section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(odd) .main-trackList-trackListRow
+{
+    background-color: #373737;
+}
+
+section[data-testid="album-page"] .main-rootlist-wrapper > [role="presentation"] > [role="presentation"]:nth-child(even) .main-trackList-trackListRow,
+section[data-testid="playlist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(even) .main-trackList-trackListRow,
+section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(even) .main-trackList-trackListRow
+{
+    background-color: #313131;
+}
+
+/* Album/Playlist Page > Sticky Header Album/Playlist Title */
+[data-testid="topbar-content"] > .encore-text-title-small
+{
+    text-shadow: 3px 3px 5px rgb(0 0 0 / 40%);
+}
+
+.main-topBar-background {
+    border-radius: 0;
+}
+
+.main-entityHeader-shadow {
+    box-shadow: 0 0 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
+}
+
+/* Page - Padding Reset */
+.contentSpacing {
+    padding: 0;
+}
+
+.contentSpacing:has(.main-entityHeader-headerText),
+.contentSpacing.main-actionBar-ActionBar,
+.main-topBar-container .contentSpacing {
+    padding: 0 var(--content-spacing);
+}
+
+.contentSpacing.main-actionBar-ActionBar {
+    padding-bottom: var(--action-bar-padding-bottom, var(--content-spacing));
+    padding-top: var(--action-bar-padding-top, var(--content-spacing));
+}
+
+/* Album/Playlist Page - Background */
+main > section[data-testid="album-page"] > .contentSpacing,
+main > section[data-testid="playlist-page"] > .contentSpacing,
+main > section[data-testid="playlist-page"] .playlist-playlist-playlistContent > .main-useDropTarget-base .contentSpacing,
+main > section[data-testid="artist-page"] > section.contentSpacing:has(.artist-artistDiscography-topBar)
+{
+    background-color: #373737;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+}
+
+/* Album Page - Copyright Date */
+main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 14px;
+    padding-bottom: 16px;
+    border-top: 1px solid #484848;
+    background: #373737;
+}
+
+.main-card-imageContainer > div:nth-child(1),
+.main-card-imageContainer img {
+    border-radius: 0;
+}
+
+/* Artist Page > "See More" Button */
+.artist-popularTrackList-seeMore {
+    border: 1px solid #373737;
+    background-image: linear-gradient(#D0D0D0, 50%, #808080);
+    color: black;
+    border-radius: 100px;
+    padding: 4px 8px;
+    margin: 12px;
+}
+
+.artist-popularTrackList-seeMore > div,
+.main-nowPlayingView-aboutArtistV2Listeners > div {
+    text-shadow: 0 1px #C0C0C0;
+}
+
+/* Artist Page > Popular Track List > Margin */
+.main-shelf-header > div { // Auto Generated Class Name
+    margin: 4px 10px;
+    min-block-size: 0;
+}
+.main-shelf-header>div>div>div:first-child,
+.main-shelf-header>div>div>div:last-child {
+    justify-content: space-around;
+}
+.main-shelf-header h2,
+.main-gridContainer-gridContainer h2
+{
+    font-size: 14px;
+}
+
+/* Artist Page > Header > Artist Image */
+.profile-editImage-imageContainer .main-avatar-image,
+/* Artist Page > About Section > Artist Image */
+.contentSpacing > .main-gridContainer-gridContainer .main-avatar-image
+{
+    box-shadow: 0 0 20px 5px rgb(10 10 10 / 100%);
+    border-radius: 0;
+}
+
+/* Artist Page > Liked Songs/Artist Pick Container (not always visible) */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) {
+    gap: 0;
+    margin-bottom: 12px;
+}
+
+/* Artist Page > Liked Songs/Artist Pick Containers (not always visible) */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) > div {
+    width: 50%
+}
+
+/* Artist Page > Liked Songs/Artist Pick Container Headers */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) h2 {
+    padding: 4px 10px;
+    background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
+    border-bottom: 1px solid #303030;
+}
+
+/* Artist Page > Liked Songs/Artist Pick Containers > Padding */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) > div > div {
+    padding: 0 var(--content-spacing);
+}
+
+/* Artist Page > Popular Songs Container Margin */
+section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer {
+    margin-bottom: 10px;
+}
+
+/* Artist Page > Shelves > Background */
+section[data-testid="artist-page"] > div > div:nth-child(2) > .contentSpacing {
+    padding: 0;
+    background: #373737;
+}
+
+.main-gridContainer-gridContainer > div > div > button { /* Auto Generated */
+    border-radius: 0;
+}
+
+// Home Page > Gap
+.main-home-content {
+    gap: 0;
+}
+
+// Home Page > Padding
+.main-home-content.contentSpacing {
+    padding: 0;
+}
+
+/* Home Page > Header Gradient Background */
+.main-home-homeHeader {
+    background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #373737), var(--background-noise);
+}
+
+/* Home Page > "Jump back in" header */
+.main-home-content section[data-testid="component-shelf"] > div:nth-child(1) {
+    padding: 0 calc(var(--content-spacing) - 8px);
+    background-image: linear-gradient(#656565, 50%, #404040);
+    border-top: 1px solid #767676;
+    border-bottom: 1px solid #373737;
+    z-index: 50;
+}
+
+.main-home-content section[data-testid="component-shelf"] > div:nth-child(1) > div {
+    min-block-size: 34px;
+}
+
+.main-home-content section[data-testid="component-shelf"] > div:nth-child(1) h2 {
+    font-size: 22px;
+}
+
+/* Home Page > "Jump back in" content */
+.main-home-content section[data-testid="component-shelf"] > div:nth-child(2) {
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #20202080;
+}
+
+// Home Page > Shortcuts List
+.view-homeShortcutsGrid-shortcuts,
+.main-home-content .search-searchCategory-contentArea {
+    padding: 0 var(--content-spacing);
+}
+
+// Home Page > Shortcuts List > Shortcut Item
+.view-homeShortcutsGrid-shortcut {
+    border-radius: 0;
+}
+
+/* Main View > Background Texture */
+.main-view-container:has([data-testid="home-page"]) .main-view-container__scroll-node > div,
+.main-view-container:has([data-testid="home-section-page"]) .main-view-container__scroll-node > div,
+/* Browse View > Background Texture */
+#searchPage,
+/* Artist Page > Background Texture */
+section[data-testid="artist-page"] > div > div:nth-child(2) > .contentSpacing {
+    background-color: #373737;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+}
+
+// Search Page > Margin/Gap
+#searchPage.contentSpacing > div:nth-child(1) > div:nth-child(1) { // Auto Generated Class Name
+    margin-top: 0;
+}
+
+#searchPage.contentSpacing > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) { // Auto Generated Class Name
+    margin-top: 0;
+}
+
+#searchPage .main-gridContainer-gridContainer {
+    gap: 0 !important;
+}
+
+.main-trackList-rowImageWithPlay .main-trackList-rowImagePlayPauseButton {
+    border-radius: 0;
+}
+
+/* Main View > Shelf List Details > Album Grid Gaps */
+.main-gridContainer-gridContainer.main-shelf-shelfGrid {
+    row-gap: 0 !important;
+}
+
+/* Main View > Shelf List Details > Header Margin */
+section.main-shelf-shelf > .main-shelf-header {
+    margin-bottom: 0;
+}
+
+.main-view-container__scroll-node-child {
+    padding-bottom: 0;
+
+    /* background: #373737; */
+}
+
+.main-view-container__scroll-node-child .contentSpacing {
+    /* background: #373737; */
+}
+
+#searchPage {
+    padding: 0;
+}
+
+/* Browse All Page > Category Card */
+section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div {
+    border-radius: 0 !important;
+    box-shadow: 0 0 9px 3px rgba(var(--spice-rgb-shadow), .5);
+}
+
+/* Browse All Page > Category Card > Album Art */
+section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
+    border-radius: 0 !important;
+}
+
+
+/* Artist/Album/Playlist Page > Action Bar > Shuffle Button */
+.main-actionBar-ActionBar .Button-buttonTertiary-large-large-iconOnly-useBrowserDefaultFocusStyle-condensedAll {
+}
+
+/* Home Page > Shelf Background */
+[data-testid="component-shelf"],
+.main-home-content.contentSpacing > .main-shelf-shelf,
+.contentSpacing [data-testid="infinite-scroll-list"] .main-shelf-shelf {
+    background-color: #373737;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+}
+
+/* Browse > Details List */
+.contentSpacing [data-testid="infinite-scroll-list"] {
+    padding: 0;
+    grid-gap: 0;
+}
+
+.main-card-imageContainer > div:nth-child(1) {
+    box-shadow: 0 0 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
+}

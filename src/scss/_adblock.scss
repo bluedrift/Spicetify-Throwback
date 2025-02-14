@@ -1,0 +1,13 @@
+//
+// NOTE: I use Premium so I dunno if this will keep working
+//
+
+/* Remove Upgrade Button, User Name, Ads */
+.main-topBar-UpgradeButton,
+.main-userWidget-displayName,
+.main-leaderboardComponent-container,
+.main-billboardComponent-footer,
+.Root__modal-slot,
+.main-minimizedVideoTakeover-videoAdContainer {
+  display: none
+}

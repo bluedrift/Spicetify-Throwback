@@ -1,0 +1,18 @@
+/* Right Navbar > Connect to a Device > Device Picker */
+aside#Desktop_PanelContainer_Id[aria-label="Connect to a device"] div[aria-labelledby="device-picker-header"] {
+    padding: 16px;
+    background-image: linear-gradient(#656565, 50%, #404040);
+    border-top: 1px solid #a1a1a1;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+/* Right Navbar > Connect to a Device > Device Picker > Start a Jam Button */
+aside#Desktop_PanelContainer_Id[aria-label="Connect to a device"] div[aria-labelledby="device-picker-header"] .ButtonInner-small-iconLeading {
+    background-image: linear-gradient(var(--background-base), var(--spice-button));
+    border: 1px solid #474747;
+}
+
+// Bottom Bar > Connect Device Target bar (bottom of screen when Connect Device is active)
+.main-connectBar-connectBar {
+    border-radius: 0;
+}
