@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard-scss": "^14.0.0"
+  }
+}
