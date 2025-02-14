@@ -1,0 +1,12 @@
+{
+  "name": "Throwback",
+  "description": "A fun, nostalgic, and skeuomorphic theme for Spotify Desktop",
+  "preview": "static/screenshot-01.png",
+  "readme": "README.md",
+  "usercss": "Throwback/user.css",
+  "schemes": "Throwback/color.ini",
+  "authors": [
+    { "name": "bluedrift", "url": "https://github.com/bluedrift" }
+  ],
+  "include": []
+}
