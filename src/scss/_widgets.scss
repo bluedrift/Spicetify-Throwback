@@ -89,7 +89,6 @@ aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] svg {
     }
 }
 
-
 //
 // Rectangular text buttons
 //
@@ -180,10 +179,7 @@ aside[aria-label="Queue"] [class*="Button-buttonTertiary-small"],
     border-color: transparent #707070 transparent transparent;
 }
 
-.ChipInnerComponent-sm, .ChipInnerComponent-sm-isUsingKeyboard,
-.ChipInnerComponent-sm-selected, .ChipInnerComponent-sm-selected-isUsingKeyboard,
-.ChipInnerComponent-sm-selected-secondary, .ChipInnerComponent-sm-selected-secondary-isUsingKeyboard
-{
+[class*="ChipInnerComponent-sm"] {
     box-sizing: initial;
     -webkit-tap-highlight-color: initial;
     border-radius: initial;
@@ -195,6 +191,7 @@ aside[aria-label="Queue"] [class*="Button-buttonTertiary-small"],
     align-items: initial;
     padding-block: initial;
     padding-inline: initial;
+
     float: left;
     height: 24px;
     line-height: 24px;
@@ -212,32 +209,33 @@ aside[aria-label="Queue"] [class*="Button-buttonTertiary-small"],
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 50%));
 }
 
-.ChipInnerComponent-sm::before, .ChipInnerComponent-sm-isUsingKeyboard::before,
-.ChipInnerComponent-sm-selected::before, .ChipInnerComponent-sm-selected-isUsingKeyboard::before  {
-    content: "";
-    float: left;
-    position: absolute;
-    top: 0;
-    left: -12px;
-    width: 0;
-    height: 0;
-    border-color: transparent #545454 transparent transparent;
-    border-style: solid;
-    border-width: 12px 12px 12px 0;
-}
+.ChipInnerComponent-sm, .ChipInnerComponent-sm-isUsingKeyboard,
+.ChipInnerComponent-sm-selected, .ChipInnerComponent-sm-selected-isUsingKeyboard {
+    &:before {
+        content: "";
+        float: left;
+        position: absolute;
+        top: 0;
+        left: -12px;
+        width: 0;
+        height: 0;
+        border-color: transparent #545454 transparent transparent;
+        border-style: solid;
+        border-width: 12px 12px 12px 0;
+    }
 
-.ChipInnerComponent-sm::after, .ChipInnerComponent-sm-isUsingKeyboard::after,
-.ChipInnerComponent-sm-selected::after, .ChipInnerComponent-sm-selected-isUsingKeyboard::after  {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 0;
-    float: left;
-    width: 4px;
-    height: 4px;
-    border-radius: 2px;
-    background: #808080;
-    box-shadow: -1px -1px 2px #004977;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        float: left;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background: #808080;
+        box-shadow: -1px -1px 2px #004977;
+    }
 }
 
 .ChipInnerComponent-sm-selected, .ChipInnerComponent-sm-selected-isUsingKeyboard,
