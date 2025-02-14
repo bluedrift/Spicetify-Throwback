@@ -17,7 +17,7 @@
     --encore-corner-radius-larger-3: 0px;
 }
 
-@media(min-width: 768px) {
+@media(width >= 768px) {
     .encore-layout-themes {
         --encore-text-size-smaller-2:0.75rem;
         --encore-text-size-smaller: 0.875rem;

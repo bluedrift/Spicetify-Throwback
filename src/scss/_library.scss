@@ -21,7 +21,7 @@ aside[aria-label="Queue"] ul > div:nth-child(even) > li {
 
 /* Library Navbar > List Item Album Art */
 [class^="x-entityImage-"] {
-    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, .65);
+    box-shadow: 0 0 9px 2px rgb(0 0 0 / 65%);
 }
 
 .main-yourLibraryX-libraryRootlist {
@@ -44,30 +44,32 @@ aside[aria-label="Queue"] ul > div:nth-child(even) > li {
     .main-yourLibraryX-headerContent{
         /* Left Navbar > Create New Dropdown Menu Item */
         #context-menu .main-contextMenu-menuItemButton {
-            @include svg-icon();
+            @include svg-icon;
+
             color: #202020;
 
             > span {
-                text-shadow: 0px 1px 1px #bbb;
+                text-shadow: 0 1px 1px #bbb;
             }
         }
 
         /* "Your Library" button */
         .main-yourLibraryX-collapseButton button svg {
             fill: #373737;
-            filter: invert(5%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+            filter: invert(5%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0 1px 0 #ccc);
         }
     }
 
     .main-yourLibraryX-collapseButtonWrapper  {
         color: #373737;
-        text-shadow: 0px 1px #C0C0C0;
+        text-shadow: 0 1px #C0C0C0;
         border-radius: 10px;
     }
 
 
     button {
-        @include svg-icon();
+        @include svg-icon;
+
         border-bottom: 1px solid #373737;
         background-image: linear-gradient(#D0D0D0, 50%, #808080);
     }
@@ -82,11 +84,11 @@ aside[aria-label="Queue"] ul > div:nth-child(even) > li {
 .main-yourLibraryX-button span {
     padding: 0;
     color: #373737;
-    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px;
+    text-shadow: rgb(255 255 255 / 50%) 0 1px 1px;
 }
 
 .main-yourLibraryX-listItem svg {
-    filter: drop-shadow(0px 1px 1px #222);
+    filter: drop-shadow(0 1px 1px #222);
 }
 
 

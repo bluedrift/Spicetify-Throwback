@@ -7,7 +7,7 @@
 aside[aria-label="Queue"] ul li span,
 .main-shelf-shelfGrid div,
 aside[aria-label="Connect to a device"] span {
-  text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px rgb(0 0 0 / 50%);
 }
 
 
@@ -20,8 +20,8 @@ aside[aria-label="Queue"] {
     padding: 0;
 
     > div:nth-child(1) {
-      padding-block-end: 0px;
-      padding-inline-end: 0px;
+      padding-block-end: 0;
+      padding-inline-end: 0;
     }
   }
 
@@ -32,7 +32,7 @@ aside[aria-label="Queue"] {
 
   /* Right Sidebar > Now Playing > Title */
   .main-trackInfo-contentWrapper h1 {
-    text-shadow: 0px 2px 3px #000000b0;
+    text-shadow: 0 2px 3px #000000b0;
   }
 
   /* Right Sidebar > Now Playing > Track Title */
@@ -47,6 +47,7 @@ aside[aria-label="Queue"] {
   /* Close Button */
   div[data-testid="PanelHeader_CloseButton"] {
     margin-right: 12px;
+
     @include svg-icon("");
   }
 }
@@ -59,11 +60,11 @@ aside[aria-label="Queue"] {
   }
 
   /* Right Navbar > Queue > "Clear queue" button */
-  #queue-panel [class*=Button-buttonTertiary-small] {
+  #queue-panel [class*="Button-buttonTertiary-small"] {
     width: 100%;
     background-image: linear-gradient(#717171, #575757);
     color: #cdcdcd;
-    text-shadow: 0px 2px rgb(0 0 0 / 50%);
+    text-shadow: 0 2px rgb(0 0 0 / 50%);
     border-radius: 0;
     border-bottom: 1px solid #474747;
     border-top: 1px solid #858585;
@@ -79,13 +80,13 @@ aside[aria-label="Queue"] {
   h2 {
     background-image: linear-gradient(#838383, #515151);
     color: #c5c5c5;
-    text-shadow: 0px 2px rgb(28 28 28 / 70%);
+    text-shadow: 0 2px rgb(28 28 28 / 70%);
     width: 100%;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 0 8px 16px;
 
     > a {
       color: #c5c5c5;
-      text-shadow: 0px 2px rgb(28 28 28 / 70%);
+      text-shadow: 0 2px rgb(28 28 28 / 70%);
     }
   }
 }
@@ -97,5 +98,5 @@ aside[aria-label="Queue"] {
 
 /* Album Art Viewer */
 .GenericModal__overlay img {
-  border-radius: 0px;
+  border-radius: 0;
 }

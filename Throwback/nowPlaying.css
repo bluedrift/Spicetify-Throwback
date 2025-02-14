@@ -10,13 +10,13 @@
   margin-bottom: 0;
 }
 
-.NowPlayingView div:has([data-testId=NPV_Panel_OpenDiv]) {
-  padding: 0px;
+.NowPlayingView div:has([data-testId="NPV_Panel_OpenDiv"]) {
+  padding: 0;
   background: #242424;
 }
 
-div[data-testId=NPV_Panel_OpenDiv] {
-  gap: 0px;
+div[data-testId="NPV_Panel_OpenDiv"] {
+  gap: 0;
 }
 
 /* Right navbar > "Queue" Header */
@@ -37,7 +37,7 @@ aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
 }
 
 .main-nowPlayingView-nowPlayingGrid {
-  gap: 0px;
+  gap: 0;
 }
 
 .main-nowPlayingView-contextItemInfo {
@@ -47,10 +47,8 @@ aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
   border-bottom: 1px solid #373737;
 }
 
-aside[aria-label=Queue] [data-testid=PanelHeader_CloseButton] {
+aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] {
   background-image: linear-gradient(#D0D0D0, 50%, #808080);
   border-radius: 100px;
   margin-right: 12px;
 }
-
-/*# sourceMappingURL=nowPlaying.css.map */

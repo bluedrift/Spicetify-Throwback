@@ -1,5 +1,5 @@
 .Root__top-container {
-    gap: 0px;
+    gap: 0;
     padding: 0;
     overflow: hidden;
 }
@@ -7,7 +7,7 @@
 .Root__globalNav {
     height: calc(48px + 24px);
     padding: calc(var(--panel-gap));
-    padding-bottom: 0px;
+    padding-bottom: 0;
     translate: 0 -8px;
 }
 
@@ -24,15 +24,15 @@
 }
 
 .Root__right-sidebar aside {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
-.Root__right-sidebar aside > div:before {
+.Root__right-sidebar aside > div::before {
     background: red;
 }
 
 .Root__main-view {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .Root__globalNav {
@@ -51,7 +51,7 @@
 
 /* Top Bar > Home Button (pressed) */
 .main-globalNav-navLink.main-globalNav-navLinkActive .Svg-img-icon-medium {
-    filter: invert(100%) sepia(100%) saturate(1200%) hue-rotate(55deg) brightness(178%) contrast(120%) drop-shadow(0px 1px 0px #9b9)
+    filter: invert(100%) sepia(100%) saturate(1200%) hue-rotate(55deg) brightness(178%) contrast(120%) drop-shadow(0 1px 0 #9b9)
 }
 
 /* About the Artist > "Follow" Button */
@@ -60,13 +60,15 @@
     border: 1px solid #373737;
     background-image: linear-gradient(#D0D0D0, 50%, #808080);
     color: black;
-    text-shadow: 0px 1px #C0C0C0;
+    text-shadow: 0 1px #C0C0C0;
 }
+
 .Button-buttonSecondary-small-useBrowserDefaultFocusStyle:hover,
 .Button-buttonSecondary-small-isUsingKeyboard-useBrowserDefaultFocusStyle:hover {
     transform: initial !important;
     border: 1px solid #373737;
 }
+
 .Button-buttonSecondary-small-useBrowserDefaultFocusStyle:active,
 .Button-buttonSecondary-small-isUsingKeyboard-useBrowserDefaultFocusStyle:active {
     background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
@@ -75,7 +77,7 @@
 }
 
 /* Top Bar > Navigation Buttons */
-.main-globalNav-historyButtons [class*=Button-buttonTertiary-medium] {
+.main-globalNav-historyButtons [class*="Button-buttonTertiary-medium"] {
     color: #3D3D3D !important;
 
     &:hover {
@@ -98,9 +100,13 @@ button:hover {
 }
 
 /* Home Page > Radio Recommendations */
+
 /* .main-shelf-shelfGrid div[class^="Box__BoxComponent-sc-"] { */
+
 /*     border-radius: 0; */
+
 /*     box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.7); */
+
 /* } */
 
 /* Notification Dot */
@@ -117,7 +123,7 @@ button:hover {
 {
     height: 24px;
     color: black;
-    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px;
+    text-shadow: rgb(255 255 255 / 50%) 0 1px 1px;
 }
 
 .main-trackList-trackListHeaderRow > div {
@@ -128,7 +134,7 @@ button:hover {
     margin-right: -8px;
 }
 
-[class^="main-trackList-rowSection"]:after {
+[class^="main-trackList-rowSection"]::after {
     content: "";
     display: block;
     border-left: 1px solid #ADADAD;
@@ -136,28 +142,31 @@ button:hover {
 }
 
 [class^="x-entityImage-"] {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 [data-testid="cover-art-button"] {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 /* Now Playing View > Border Radius */
 .main-coverSlotCollapsed-navAltContainer, .main-nowPlayingView-coverArt,
 .main-nowPlayingView-aboutArtistV2Image,
 .main-nowPlayingView-aboutArtistV2Button {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .main-trackList-trackListHeader,
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader
 {
     /* -webkit-box-sizing: content-box; */
+
     /* box-sizing: content-box; */
     height: 24px;
+
     /* margin: 0 calc(var(--content-spacing)* -1) calc(var(--content-spacing) - 8px); */
-    margin: 0 calc(var(--content-spacing)* -1) 0;
+    margin: 0 calc(var(--content-spacing)* -1);
+
     /* padding: 0 var(--content-spacing); */ 
     position: sticky;
     z-index: 2;
@@ -168,21 +177,26 @@ button:hover {
 }
 
 /* .main-trackList-trackListHeader:after { */
+
 /*     content: ""; */
+
 /*     display: block; */
+
 /*     border: 1px solid black; */
+
 /* } */
 
 .main-trackList-column {
     color: black;
-    text-shadow: 0px 1px rgba(200, 200, 200, 0.5);
+    text-shadow: 0 1px rgb(200 200 200 / 50%);
+
     /* font-weight: bold; */
 }
 
 .main-trackList-column.main-trackList-durationHeader {
     translate: -7px 0;
     color: black;
-    filter: drop-shadow(0px 1px 1px rgba(200, 200, 200, 0.5));
+    filter: drop-shadow(0 1px 1px rgb(200 200 200 / 50%));
 }
 
 .encore-text-body-small {
@@ -217,13 +231,13 @@ button:hover {
 .main-trackList-trackListRow, .main-rootlist-wrapper {
     /* --row-height: 28px !important; */
     /* --row-height: 40px !important; */
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .playlist-playlist-playlist .main-trackList-trackListRow, .main-rootlist-wrapper,
 section[data-testid="album-page"] .main-trackList-trackListRow, .main-rootlist-wrapper {
     /* --row-height: 32px !important; */
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 /* .main-gridContainer-gridContainer { */
@@ -231,7 +245,7 @@ section[data-testid="album-page"] .main-trackList-trackListRow, .main-rootlist-w
 /* } */
 
 .main-trackList-rowImage {
-    border-radius: 0px !important;
+    border-radius: 0 !important;
 }
 
 /* Track List > Track Item Background */
@@ -241,6 +255,7 @@ section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"
 {
     background-color: #373737;
 }
+
 section[data-testid="album-page"] .main-rootlist-wrapper > [role="presentation"] > [role="presentation"]:nth-child(even) .main-trackList-trackListRow,
 section[data-testid="playlist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(even) .main-trackList-trackListRow,
 section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"] > div:nth-child(even) .main-trackList-trackListRow
@@ -255,11 +270,11 @@ section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"
 }
 
 .main-nowPlayingView-section {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .main-entityHeader-image {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .StyledTabList-tablist-tabList {
@@ -270,7 +285,7 @@ section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"
 .StyledTabList-tablist-tabList > button {
     background-image: linear-gradient(#D0D0D0, 50%, #808080);
     color: #272727;
-    text-shadow: 0px 1px #C0C0C0;
+    text-shadow: 0 1px #C0C0C0;
 }
 
 [class*="StyledTabItem-tab-tabItem"]:hover {
@@ -283,13 +298,13 @@ section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"
 }
 
 [class*="StyledTabItem-tab-tabItem"][aria-selected="true"] {
-    background-image: linear-gradient(180deg, #999999, #595959);
+    background-image: linear-gradient(180deg, #999, #595959);
     color: #C8C8C8;
-    text-shadow: 0px 2px #404040;
+    text-shadow: 0 2px #404040;
 }
 
 [class*="StyledTabItem-tab-tabItem"][aria-selected="true"]:active {
-    background-image: linear-gradient(#595959, 20%, #999999) !important;
+    background-image: linear-gradient(#595959, 20%, #999) !important;
 }
 
 .StyledTabList-tablist-tabList > button {
@@ -312,33 +327,34 @@ section[data-testid="artist-page"] .main-rootlist-wrapper > [role="presentation"
 /* Album/Playlist Page > Album/Playlist Title */
 .encore-text-headline-large {
     font-size: var(--encore-text-size-larger-4) !important;
-    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 4px 4px 5px rgb(0 0 0 / 40%);
     font-weight: bold;
 }
 
 .encore-text-title-small
 {
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 4px rgb(0 0 0 / 60%);
 }
 
 /* Album/Playlist Page > Sticky Header Album/Playlist Title */
 [data-testid="topbar-content"] > .encore-text-title-small
 {
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 3px 3px 5px rgb(0 0 0 / 40%);
 }
 
 .main-topBar-background {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .main-entityHeader-shadow {
-    box-shadow: 0px 0px 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
+    box-shadow: 0 0 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
 }
 
 /* Page - Padding */
 .contentSpacing {
     padding: 0;
 }
+
 .contentSpacing:has(.main-entityHeader-headerText),
 .contentSpacing.main-actionBar-ActionBar,
 .main-topBar-container .contentSpacing {
@@ -357,12 +373,12 @@ main > section[data-testid="playlist-page"] .playlist-playlist-playlistContent >
 main > section[data-testid="artist-page"] > section.contentSpacing:has(.artist-artistDiscography-topBar)
 {
     background-color: #373737;
-    background-image: url(https://www.transparenttextures.com/patterns/low-contrast-linen.png);
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
 }
 
 /* Album Page - Copyright Date */
 main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
-    margin: 0px;
+    margin: 0;
     padding-top: 10px;
     padding-left: 14px;
     padding-bottom: 16px;
@@ -375,16 +391,16 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
 /* } */
 
 .main-card-imageContainer > div:nth-child(1), .main-card-imageContainer img  {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm,
-.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm:after {
+.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm::after {
     /* background-color: var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)); */
     background: #707070;
 }
 
-.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm:before {
+.LegacyChip__LegacyChipComponent-sc-tzfq94-0:hover > .ChipInnerComponent-sm::before {
     border-color: transparent #707070 transparent transparent;
 }
 
@@ -395,7 +411,6 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     box-sizing: initial;
     -webkit-tap-highlight-color: initial;
     border-radius: initial;
-    color: initial;
     transition: initial;
     display: initial;
     min-inline-size: initial;
@@ -404,8 +419,6 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     align-items: initial;
     padding-block: initial;
     padding-inline: initial;
-    background-color: initial;
-
     float: left;
     height: 24px;
     line-height: 24px;
@@ -417,16 +430,14 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     color: #fff;
     text-decoration: none;
     -moz-border-radius-bottomright: 4px;
-    -webkit-border-bottom-right-radius: 4px;
     border-bottom-right-radius: 4px;
     -moz-border-radius-topright: 4px;
-    -webkit-border-top-right-radius: 4px;
     border-top-right-radius: 4px;
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 50%));
 }
 
-.ChipInnerComponent-sm:before, .ChipInnerComponent-sm-isUsingKeyboard:before, 
-.ChipInnerComponent-sm-selected:before, .ChipInnerComponent-sm-selected-isUsingKeyboard:before  {
+.ChipInnerComponent-sm::before, .ChipInnerComponent-sm-isUsingKeyboard::before, 
+.ChipInnerComponent-sm-selected::before, .ChipInnerComponent-sm-selected-isUsingKeyboard::before  {
     content: "";
     float: left;
     position: absolute;
@@ -439,8 +450,8 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     border-width: 12px 12px 12px 0;
 }
 
-.ChipInnerComponent-sm:after, .ChipInnerComponent-sm-isUsingKeyboard:after, 
-.ChipInnerComponent-sm-selected:after, .ChipInnerComponent-sm-selected-isUsingKeyboard:after  {
+.ChipInnerComponent-sm::after, .ChipInnerComponent-sm-isUsingKeyboard::after, 
+.ChipInnerComponent-sm-selected::after, .ChipInnerComponent-sm-selected-isUsingKeyboard::after  {
     content: "";
     position: absolute;
     top: 10px;
@@ -448,12 +459,8 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     float: left;
     width: 4px;
     height: 4px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
     border-radius: 2px;
     background: #808080;
-    -moz-box-shadow: -1px -1px 2px #004977;
-    -webkit-box-shadow: -1px -1px 2px #004977;
     box-shadow: -1px -1px 2px #004977;
 }
 
@@ -463,7 +470,7 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     color: black;
 }
 
-.ChipInnerComponent-sm-selected:before, .ChipInnerComponent-sm-selected-isUsingKeyboard:before  {
+.ChipInnerComponent-sm-selected::before, .ChipInnerComponent-sm-selected-isUsingKeyboard::before  {
     border-color: transparent #BBB transparent transparent;
 }
 
@@ -476,8 +483,8 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
     border-bottom: 1px solid #303030;
     padding: 4px 10px;
-    margin-block-end: 0px !important;
-    min-block-size: 0px;
+    margin-block-end: 0 !important;
+    min-block-size: 0;
 }
 
 /* Artist Page > "See More" Button */
@@ -489,15 +496,17 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     padding: 4px 8px;
     margin: 12px;
 }
+
 .artist-popularTrackList-seeMore > div,
 .main-nowPlayingView-aboutArtistV2Listeners > div {
-    text-shadow: 0px 1px #C0C0C0;
+    text-shadow: 0 1px #C0C0C0;
 }
 
 .main-shelf-header > div { /* Auto Generated */
     margin: 4px 10px;
-    min-block-size: 0px;
+    min-block-size: 0;
 }
+
 .main-shelf-header>div>div>div:first-child,
 .main-shelf-header>div>div>div:last-child {
     justify-content: space-around;
@@ -514,20 +523,20 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
 /* Artist Page > About Section > Artist Image */
 .contentSpacing > .main-gridContainer-gridContainer .main-avatar-image
 {
-    box-shadow: 0px 0px 20px 5px rgba(10, 10, 10, 1);
-    border-radius: 0px;
+    box-shadow: 0 0 20px 5px rgb(10 10 10 / 100%);
+    border-radius: 0;
 }
 
 .main-gridContainer-gridContainer > div > div > button { /* Auto Generated */
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .main-home-content {
-    gap: 0px;
+    gap: 0;
 }
 
 .main-home-content.contentSpacing {
-    padding: 0px;
+    padding: 0;
 }
 
 /* Home Screen > Header Gradient Background */
@@ -537,10 +546,7 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
 
 /* Home Screen > "Jump back in" header */
 .main-home-content section[data-testid="component-shelf"] > div:nth-child(1) {
-    border-top: 1px solid #80808080;
-    border-bottom: 1px solid #20202080;
     padding: 0 calc(var(--content-spacing) - 8px);
-
     background-image: linear-gradient(#656565, 50%, #404040);
     border-top: 1px solid #767676;
     border-bottom: 1px solid #373737;
@@ -549,7 +555,7 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
 
 /* Artist Page > Liked Songs/Artist Pick Container (not always visible) */
 section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-gridContainer > div:nth-child(2) {
-    gap: 0px;
+    gap: 0;
     margin-bottom: 12px;
 }
 
@@ -600,7 +606,7 @@ section[data-testid="artist-page"] .contentSpacing > div > .main-gridContainer-g
 
 /* Artist page shelves background */
 section[data-testid="artist-page"] > div > div:nth-child(2) > .contentSpacing {
-    padding: 0px;
+    padding: 0;
     background: #373737;
 }
 
@@ -612,7 +618,7 @@ section[data-testid="artist-page"] > div > div:nth-child(2) > .contentSpacing {
 /* Artist Page > Background Texture */
 section[data-testid="artist-page"] > div > div:nth-child(2) > .contentSpacing {
     background-color: #373737;
-    background-image: url(https://www.transparenttextures.com/patterns/low-contrast-linen.png);
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
 }
 
 #searchPage.contentSpacing > div:nth-child(1) > div:nth-child(1) {
@@ -642,7 +648,8 @@ section.main-shelf-shelf > .main-shelf-header {
 }
 
 .main-view-container__scroll-node-child {
-    padding-bottom: 0px;
+    padding-bottom: 0;
+
     /* background: #373737; */
 }
 
@@ -651,7 +658,7 @@ section.main-shelf-shelf > .main-shelf-header {
 }
 
 #searchPage {
-    padding: 0px;
+    padding: 0;
 }
 
 /* Inset SVG Icons inside Buttons */
@@ -659,28 +666,28 @@ section.main-shelf-shelf > .main-shelf-header {
 [class*="ChipClearComponent-chipClear-sm"] svg,
 /* .main-loadingIndicator-loadingIcon svg, */
 aside[aria-label="Queue"] [data-testid="PanelHeader_CloseButton"] svg {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0 1px 0 #ccc);
 }
 
 /* Bottom Bar > Left Icons > Drop Shadow */
 .main-nowPlayingWidget-nowPlaying svg {
-    filter: drop-shadow(0px 1px 1px #222);
+    filter: drop-shadow(0 1px 1px #222);
 }
 
 /* Bottom Bar > Right Icons > Drop Shadow */
 .main-nowPlayingBar-extraControls svg {
-    filter: drop-shadow(0px 2px 1px #222);
+    filter: drop-shadow(0 2px 1px #222);
 }
 
 /* Browse All Page > Category Card */
 section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div {
-    border-radius: 0px !important;
-    box-shadow: 0px 0px 9px 3px rgba(var(--spice-rgb-shadow), .5);
+    border-radius: 0 !important;
+    box-shadow: 0 0 9px 3px rgba(var(--spice-rgb-shadow), .5);
 }
 
 /* Browse All Page > Category Card > Album Art */
 section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
-    border-radius: 0px !important;
+    border-radius: 0 !important;
 }
 
 .Root__now-playing-bar {
@@ -692,7 +699,7 @@ section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
 }
 
 .x-progressBar-progressBarBg { 
-    box-shadow: inset 0px 6px 14px rgb(81 81 81 / 82%), inset 0 -6px 2px rgb(167 167 167);
+    box-shadow: inset 0 6px 14px rgb(81 81 81 / 82%), inset 0 -6px 2px rgb(167 167 167);
 }
 
 .x-progressBar-fillColor {
@@ -707,13 +714,21 @@ section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
 }
 
 /* /1* Album Page > "More by <artist>" Button *1/ */
+
 /* [class^="Areas__InteractiveArea-"] { */
+
 /*     border-radius: 100px; */
+
 /*     background-image: linear-gradient(#D0D0D0, 50%, #808080); */
+
 /*     padding: 0px 8px; */
+
 /* } */
+
 /* [class^="Areas__InteractiveArea-"] > a { */
+
 /*     color: #373737; */
+
 /* } */
 
 .progress-bar__slider {
@@ -729,7 +744,7 @@ section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
 }
 
 .main-card-imageContainer > div:nth-child(1) {
-    box-shadow: 0px 0px 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
+    box-shadow: 0 0 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
 }
 
 /* Home Page > Shelf Background */
@@ -737,7 +752,7 @@ section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
 .main-home-content.contentSpacing > .main-shelf-shelf,
 .contentSpacing [data-testid="infinite-scroll-list"] .main-shelf-shelf {
     background-color: #373737;
-    background-image: url(https://www.transparenttextures.com/patterns/low-contrast-linen.png);
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
 }
 
 .Root__now-playing-bar {
@@ -757,6 +772,7 @@ footer.main-nowPlayingBar-container {
 main .search-searchCategory-contentArea:hover .search-searchCategory-carousel .search-searchCategory-carouselButton:nth-child(1) {
     translate: 50px -14px;
 }
+
 main .search-searchCategory-contentArea:hover .search-searchCategory-carousel .search-searchCategory-carouselButton:nth-child(2) {
     translate: -50px -14px;
 }
@@ -776,22 +792,22 @@ time.artist-artistOnTour-date.artist-artistOnTour-elevated {
 time.artist-artistOnTour-date > .artist-artistOnTour-dateMonth,
 time.artist-artistOnTour-date > .artist-artistOnTour-dateDay {
     color: #303030;
-    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px !important;
+    text-shadow: rgb(255 255 255 / 50%) 0 1px 1px !important;
 }
 
 section[data-testid="artist-page"] .contentSpacing > div:has(ul.artist-artistOnTour-onTourShelfGrid) > div {
     background-image: linear-gradient(#606060, 20%, #505050, 80%, #454545);
     border-bottom: 1px solid #303030;
-    text-shadow: 0px 2px rgb(28 28 28 / 70%);
+    text-shadow: 0 2px rgb(28 28 28 / 70%);
     width: 100%;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 0 8px 16px;
 }
 
 /* Bottom Bar > Control Buttons > Drop Shadow */
 .player-controls__buttons [class*="Button-checkbox-buttonTertiary-"] svg,
 .player-controls__buttons [class*="Button-buttonTertiary-"] svg
 {
-    filter: drop-shadow(0px 1px 1px #000);
+    filter: drop-shadow(0 1px 1px #000);
 }
 
 [data-testid="control-button-playpause"] {
@@ -799,7 +815,7 @@ section[data-testid="artist-page"] .contentSpacing > div:has(ul.artist-artistOnT
 }
 
 .main-connectBar-connectBar {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 /* Right Navbar > Connect to a Device > Device Picker */
@@ -818,7 +834,7 @@ aside#Desktop_PanelContainer_Id[aria-label="Connect to a device"] div[aria-label
 
 /* Shelf > Header > "Show all" link */
 [class*="Areas__HeaderArea-sc-"] a {
-    margin: 7px 10px 0px;
+    margin: 7px 10px 0;
     align-items: center;
 }
 

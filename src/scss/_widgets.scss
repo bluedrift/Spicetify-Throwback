@@ -3,27 +3,29 @@
 /* Circular Icon Buttons (Play, Home, Marketplace, etc.) */
 .main-globalNav-navLink:not(.main-globalNav-navLinkActive) .Svg-img-icon-medium,
 .main-actionButtons > button > svg {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0px 1px 0px #ccc);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(350deg) brightness(119%) contrast(119%) drop-shadow(0 1px 0 #ccc);
 }
 
-[class*=ButtonInner-] svg {
-    filter: drop-shadow(0px 1px 0px #ccc);
+[class*="ButtonInner-"] svg {
+    filter: drop-shadow(0 1px 0 #ccc);
     transform: initial;
 }
 
 .main-globalNav-navLink,
 .main-userWidget-box,
-[class*=ButtonInner-] {
+[class*="ButtonInner-"] {
     background-image: linear-gradient(180deg, #F0F0F0, 40%, #808080);
     border: 1px solid #505050;
+
     &:active {
         border: 1px solid #505050;
         background-image: linear-gradient(180deg, #606060, 20%, #B0B0B0);
     }
 }
 
-[class*=ButtonInner-small] {
+[class*="ButtonInner-small"] {
     border: none;
+
     &:active { 
         border: none;
     }
@@ -31,8 +33,8 @@
 
 
 /* Sort button */
-[class*=Button-combobox-buttonTertiary-small],
-aside[aria-label=Queue] [class*=Button-buttonTertiary-small],
+[class*="Button-combobox-buttonTertiary-small"],
+aside[aria-label="Queue"] [class*="Button-buttonTertiary-small"],
 .x-sortBox-sortDropdown {
     color: #202020;
     background-image: linear-gradient(#D0D0D0, 50%, #808080);
@@ -40,10 +42,10 @@ aside[aria-label=Queue] [class*=Button-buttonTertiary-small],
     border: 1px solid #202020;
     border-radius: 4px;
     padding: 0;
-    padding-inline: 8px 8px;
+    padding-inline: 8px;
 
     span {
-        text-shadow: 0px 1px 1px #bbb;
+        text-shadow: 0 1px 1px #bbb;
     }
 
     &:hover {
@@ -59,7 +61,7 @@ aside[aria-label=Queue] [class*=Button-buttonTertiary-small],
 }
 
 /* Chip/Tag */
-[class*=LegacyChipComponent-checkbox-chip-sm] {
+[class*="LegacyChipComponent-checkbox-chip-sm"] {
     margin: 0 !important;
     align-items: flex-end;
 

@@ -11,12 +11,12 @@
 }
 
 .NowPlayingView div:has([data-testId="NPV_Panel_OpenDiv"]) {
-    padding: 0px;
+    padding: 0;
     background: #242424;
 }
 
 div[data-testId="NPV_Panel_OpenDiv"] {
-    gap: 0px;
+    gap: 0;
 }
 
 /* Right navbar > "Queue" Header */
@@ -37,7 +37,7 @@ aside[aria-label="Connect to a device"] > div:nth-child(1) > div:nth-child(1) {
 }
 
 .main-nowPlayingView-nowPlayingGrid {
-    gap: 0px;
+    gap: 0;
 }
 
 .main-nowPlayingView-contextItemInfo {
