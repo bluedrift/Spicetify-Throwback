@@ -923,6 +923,10 @@ section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
   box-shadow: 0 0 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
 }
 
+.playlist-playlist-playlistDescription {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.82);
+}
+
 .Root__now-playing-bar {
   background-image: linear-gradient(#656565, 40%, #404040);
   border-top: 1px solid #373737;

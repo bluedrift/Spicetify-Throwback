@@ -6,7 +6,8 @@
     "stylelint-config-standard-scss": "^14.0.0"
   },
   "scripts": {
-    "build": "just build",
-    "watch": "just watch"
+    "build": "sass ./src/scss/:./Throwback/",
+    "watch": "sass --watch ./src/scss/:../../AppData/Roaming/spicetify/Themes/Throwback",
+    "fix": "npx stylelint \"**/*.{css,scss}\" --fix"
   }
 }

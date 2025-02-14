@@ -98,10 +98,12 @@ main > section[data-testid="album-page"] .contentSpacing > div:nth-child(2) {
     margin: 4px 10px;
     min-block-size: 0;
 }
+
 .main-shelf-header>div>div>div:first-child,
 .main-shelf-header>div>div>div:last-child {
     justify-content: space-around;
 }
+
 .main-shelf-header h2,
 .main-gridContainer-gridContainer h2
 {
@@ -288,4 +290,9 @@ section[aria-label="Browse all"] .main-shelf-shelfGrid > div > a > div img {
 
 .main-card-imageContainer > div:nth-child(1) {
     box-shadow: 0 0 15px 4px rgba(var(--spice-rgb-shadow), 0.65);
+}
+
+// Playlist Page > Playlist Details > Description
+.playlist-playlist-playlistDescription {
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 82%);
 }
