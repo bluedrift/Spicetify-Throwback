@@ -262,9 +262,7 @@ aside[aria-label=Queue] [class*=Button-buttonTertiary-small]:active,
   border-color: transparent #707070 transparent transparent;
 }
 
-.ChipInnerComponent-sm, .ChipInnerComponent-sm-isUsingKeyboard,
-.ChipInnerComponent-sm-selected, .ChipInnerComponent-sm-selected-isUsingKeyboard,
-.ChipInnerComponent-sm-selected-secondary, .ChipInnerComponent-sm-selected-secondary-isUsingKeyboard {
+[class*=ChipInnerComponent-sm] {
   box-sizing: initial;
   -webkit-tap-highlight-color: initial;
   border-radius: initial;
@@ -293,8 +291,8 @@ aside[aria-label=Queue] [class*=Button-buttonTertiary-small]:active,
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
 }
 
-.ChipInnerComponent-sm::before, .ChipInnerComponent-sm-isUsingKeyboard::before,
-.ChipInnerComponent-sm-selected::before, .ChipInnerComponent-sm-selected-isUsingKeyboard::before {
+.ChipInnerComponent-sm:before, .ChipInnerComponent-sm-isUsingKeyboard:before,
+.ChipInnerComponent-sm-selected:before, .ChipInnerComponent-sm-selected-isUsingKeyboard:before {
   content: "";
   float: left;
   position: absolute;
@@ -306,9 +304,8 @@ aside[aria-label=Queue] [class*=Button-buttonTertiary-small]:active,
   border-style: solid;
   border-width: 12px 12px 12px 0;
 }
-
-.ChipInnerComponent-sm::after, .ChipInnerComponent-sm-isUsingKeyboard::after,
-.ChipInnerComponent-sm-selected::after, .ChipInnerComponent-sm-selected-isUsingKeyboard::after {
+.ChipInnerComponent-sm:after, .ChipInnerComponent-sm-isUsingKeyboard:after,
+.ChipInnerComponent-sm-selected:after, .ChipInnerComponent-sm-selected-isUsingKeyboard:after {
   content: "";
   position: absolute;
   top: 10px;
@@ -587,10 +584,6 @@ input.x-filterBox-filterInput {
   translate: 0 -8px;
   background-image: linear-gradient(#D0D0D0, 50%, #808080);
   border-bottom: 1px solid #373737;
-}
-
-.spotify__container--is-desktop.spotify__os--is-windows .Root__globalNav {
-  padding-inline: calc(64px - 4px * var(--zoom-level, 0)) calc(164px - 12px * var(--zoom-level, 0));
 }
 
 .Root__nav-bar {

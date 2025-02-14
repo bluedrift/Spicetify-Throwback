@@ -14,10 +14,6 @@
     border-bottom: 1px solid #373737;
 }
 
-.spotify__container--is-desktop.spotify__os--is-windows .Root__globalNav {
-    padding-inline: calc(64px - 4px*var(--zoom-level, 0)) calc(164px - 12px*var(--zoom-level, 0));
-}
-
 .Root__nav-bar {
     border-right: 1px solid #373737;
 }
