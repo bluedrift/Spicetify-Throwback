@@ -7,6 +7,5 @@
   "schemes": "Throwback/color.ini",
   "authors": [
     { "name": "bluedrift", "url": "https://github.com/bluedrift" }
-  ],
-  "include": []
+  ]
 }
